@@ -1,0 +1,360 @@
+
+/* ==========================================
+   MERXENTA - LATEST INSIGHTS SECTION
+========================================== */
+
+.insightsSection {
+  position: relative;
+
+  width: 100%;
+
+  background-color: #f5f3e9;
+  color: #202020;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 80px 120px 100px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN HEADING
+   OUTFIT + ALEX BRUSH
+========================================== */
+
+.mainHeading {
+  display: flex;
+  align-items: baseline;
+
+  gap: 8px;
+
+  width: 100%;
+
+  margin: 0 0 40px;
+  padding: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   OUTFIT HEADING
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   ALEX BRUSH HEADING
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   INSIGHTS GRID
+   384px × 3 + 24px × 2
+========================================== */
+
+.insightsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+
+  gap: 24px;
+
+  width: 100%;
+}
+
+/* ==========================================
+   INSIGHT CARD
+========================================== */
+
+.insightCard {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   INSIGHT IMAGE
+   FIGMA: 384px × 338px
+========================================== */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 338px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background-color: #e9e6df;
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.insightImage {
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s cubic-bezier(
+    0.22,
+    1,
+    0.36,
+    1
+  );
+}
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+.insightCard:hover .insightImage {
+  transform: scale(1.035);
+}
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  padding-top: 24px;
+}
+
+/* ==========================================
+   DATE
+   OUTFIT MEDIUM 16px
+========================================== */
+
+.insightDate {
+  margin: 0 0 12px;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #666666;
+}
+
+/* ==========================================
+   ARTICLE HEADING
+   OUTFIT MEDIUM 24px
+========================================== */
+
+.insightTitle {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: -0.005em;
+
+  color: #202020;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 72px 6% 90px;
+  }
+
+  .insightsGrid {
+    gap: 20px;
+  }
+
+  .imageWrapper {
+    height: 290px;
+  }
+
+  .insightTitle {
+    font-size: 21px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 64px 40px 80px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 42px;
+  }
+
+  .insightsGrid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+    gap: 24px;
+  }
+
+  .imageWrapper {
+    height: 280px;
+  }
+
+  .insightTitle {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 24px 72px;
+  }
+
+  .mainHeading {
+    margin-bottom: 28px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 38px;
+  }
+
+  .insightsGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 384 / 338;
+  }
+
+  .cardContent {
+    padding-top: 20px;
+  }
+
+  .insightDate {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .insightTitle {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 34px;
+  }
+
+  .insightsGrid {
+    gap: 32px;
+  }
+
+  .cardContent {
+    padding-top: 16px;
+  }
+
+  .insightDate {
+    font-size: 13px;
+  }
+
+  .insightTitle {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .insightImage {
+    transition: none;
+  }
+
+  .insightCard:hover .insightImage {
+    transform: none;
+  }
+}

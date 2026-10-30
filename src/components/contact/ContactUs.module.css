@@ -1,0 +1,471 @@
+
+/* ==========================================
+   MERXENTA - CONTACT US SECTION
+========================================== */
+
+.contactSection {
+  position: relative;
+
+  width: 100%;
+
+  background-color: #f5f3e9;
+  color: #202020;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+   FIGMA WIDTH: 1440px
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 150px 80px 80px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   HEADING WRAPPER
+========================================== */
+
+.headingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 40px;
+
+  text-align: center;
+}
+
+/* ==========================================
+   MAIN HEADING
+   OUTFIT + ALEX BRUSH
+========================================== */
+
+.mainHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  margin: 0 0 16px;
+  padding: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   OUTFIT HEADING
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   ALEX BRUSH HEADING
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   SUBHEADING
+   OUTFIT REGULAR 16px
+========================================== */
+
+.subHeading {
+  max-width: 720px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 120%;
+  letter-spacing: -0.02em;
+
+  text-align: center;
+
+  color: #404040;
+}
+
+/* ==========================================
+   CONTACT MAIN GRID
+
+   IMAGE: 416px
+   INFO AREA: 848px
+   GAP: 16px
+========================================== */
+
+.contactGrid {
+  display: grid;
+
+  grid-template-columns:
+    416px minmax(0, 1fr);
+
+  gap: 16px;
+
+  width: 100%;
+
+  align-items: stretch;
+}
+
+/* ==========================================
+   CONTACT IMAGE
+   FIGMA: 416px × 438px
+========================================== */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 438px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background-color: #e9e6df;
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.contactImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ==========================================
+   RIGHT INFORMATION GRID
+
+   416px × 211px
+   GAP: 16px
+========================================== */
+
+.infoGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  grid-template-rows:
+    repeat(2, 211px);
+
+  gap: 16px;
+
+  width: 100%;
+}
+
+/* ==========================================
+   INFORMATION CARD
+========================================== */
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  min-width: 0;
+  height: 211px;
+
+  padding: 40px;
+
+  border: 1px solid #dedbd1;
+  border-radius: 20px;
+
+  background-color: transparent;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   CARD LABEL
+   OUTFIT REGULAR 16px
+========================================== */
+
+.cardLabel {
+  margin: 0 0 16px;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #54203f;
+}
+
+/* ==========================================
+   CARD VALUE
+   OUTFIT MEDIUM 20px
+========================================== */
+
+.cardValue {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: -0.02em;
+
+  color: #404040;
+
+  text-decoration: none;
+  font-style: normal;
+
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   LINK HOVER
+========================================== */
+
+a.cardValue:hover {
+  color: #9d2177;
+}
+
+a.cardValue:focus-visible {
+  outline: 2px solid #9d2177;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .contactGrid {
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, 2fr);
+  }
+
+  .infoCard {
+    padding: 30px;
+  }
+
+  .cardValue {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 130px 6% 80px;
+  }
+
+  .contactGrid {
+    grid-template-columns:
+      minmax(0, 0.85fr) minmax(0, 2fr);
+  }
+
+  .infoGrid {
+    gap: 12px;
+  }
+
+  .infoCard {
+    padding: 24px;
+  }
+
+  .cardLabel {
+    font-size: 14px;
+  }
+
+  .cardValue {
+    font-size: 16px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 120px 40px 72px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 42px;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .imageWrapper {
+    height: 400px;
+  }
+
+  .infoGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+  .infoCard {
+    padding: 28px;
+  }
+
+  .cardLabel {
+    font-size: 16px;
+  }
+
+  .cardValue {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 110px 24px 64px;
+  }
+
+  .headingWrapper {
+    margin-bottom: 32px;
+  }
+
+  .mainHeading {
+    margin-bottom: 16px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 38px;
+  }
+
+  .subHeading {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .subHeading br {
+    display: none;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .imageWrapper {
+    height: 360px;
+    border-radius: 16px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    gap: 16px;
+  }
+
+  .infoCard {
+    height: auto;
+    min-height: 160px;
+
+    padding: 28px;
+
+    border-radius: 16px;
+  }
+
+  .cardLabel {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .cardValue {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 100px 20px 56px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 34px;
+  }
+
+  .subHeading {
+    font-size: 13px;
+  }
+
+  .imageWrapper {
+    height: 320px;
+  }
+
+  .infoCard {
+    padding: 24px;
+    min-height: 150px;
+  }
+
+  .cardValue {
+    font-size: 16px;
+  }
+}
