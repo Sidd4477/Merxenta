@@ -1,0 +1,347 @@
+
+/* ==========================================
+   MERXENTA - LATEST UPDATES
+========================================== */
+
+.newsSection {
+  position: relative;
+
+  width: 100%;
+
+  background-color: #f5f3e9;
+  color: #202020;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+   FIGMA: 1440px
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 150px 120px 100px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN HEADING
+   OUTFIT + ALEX BRUSH
+========================================== */
+
+.mainHeading {
+  display: flex;
+  align-items: baseline;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin: 0 0 40px;
+  padding: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   OUTFIT HEADING
+   FIGMA: 64px MEDIUM
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 64px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   ALEX BRUSH HEADING
+   FIGMA: 64px REGULAR
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 64px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   NEWS GRID
+   3 COLUMNS × 2 ROWS
+
+   384px + 384px + 384px
+   GAP: 24px
+========================================== */
+
+.newsGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  column-gap: 24px;
+  row-gap: 24px;
+
+  width: 100%;
+}
+
+/* ==========================================
+   NEWS CARD
+========================================== */
+
+.newsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   NEWS IMAGE
+   FIGMA: 384px × 338px
+========================================== */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 338px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background-color: #e9e6df;
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.newsImage {
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+.newsCard:hover .newsImage {
+  transform: scale(1.035);
+}
+
+/* ==========================================
+   NEWS DATE
+   OUTFIT MEDIUM 16px
+========================================== */
+
+.newsDate {
+  margin: 20px 0 12px;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #777777;
+}
+
+/* ==========================================
+   NEWS TITLE
+   OUTFIT MEDIUM 24px
+========================================== */
+
+.newsTitle {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: -0.005em;
+
+  color: #202020;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 130px 6% 90px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 56px;
+  }
+
+  .newsGrid {
+    gap: 20px;
+  }
+
+  .imageWrapper {
+    height: 290px;
+  }
+
+  .newsTitle {
+    font-size: 21px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 120px 40px 80px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 48px;
+  }
+
+  .newsGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+  }
+
+  .imageWrapper {
+    height: 280px;
+  }
+
+  .newsTitle {
+    font-size: 20px;
+  }
+
+  .newsDate {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 110px 24px 72px;
+  }
+
+  .mainHeading {
+    margin-bottom: 32px;
+    gap: 8px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 40px;
+  }
+
+  .newsGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .imageWrapper {
+    height: 300px;
+  }
+
+  .newsDate {
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+  }
+
+  .newsTitle {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 100px 20px 64px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 34px;
+  }
+
+  .imageWrapper {
+    height: 250px;
+  }
+
+  .newsTitle {
+    font-size: 18px;
+  }
+
+  .newsDate {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .newsImage {
+    transition: none;
+  }
+
+  .newsCard:hover .newsImage {
+    transform: none;
+  }
+}
