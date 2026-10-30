@@ -1,0 +1,612 @@
+
+/* ==========================================
+   MERXENTA - NAVBAR
+========================================== */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  width: 100%;
+  height: 86px;
+
+  background: transparent;
+}
+
+/* ==========================================
+   NAV CONTAINER
+========================================== */
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 0 120px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo,
+.overlayLogo {
+  font-family: "Outfit", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 120%;
+  letter-spacing: -0.015em;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   MENU BUTTON
+========================================== */
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 8px 0;
+
+  border: none;
+  background: transparent;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ==========================================
+   MENU TEXT
+========================================== */
+
+.menuLabel {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   HAMBURGER ICON
+========================================== */
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  width: 24px;
+  height: 24px;
+}
+
+.hamburger span {
+  display: block;
+
+  width: 18.56px;
+  height: 1.5px;
+
+  background-color: currentColor;
+
+  border-radius: 2px;
+}
+
+/* ==========================================
+   ABOUT & CAREERS PAGE
+   BLACK NAVBAR TEXT AND ICON
+========================================== */
+
+.navbarDark .logo {
+  color: #202020;
+}
+
+.navbarDark .menuButton {
+  color: #202020;
+}
+
+.navbarDark .menuLabel {
+  color: #202020;
+}
+
+.navbarDark .hamburger span {
+  background-color: #202020;
+}
+
+/* ==========================================
+   FULL SCREEN MENU OVERLAY
+========================================== */
+
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: #1f1f1f;
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform: translateY(-16px);
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.35s ease;
+}
+
+.menuOpen {
+  opacity: 1;
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+/* ==========================================
+   OVERLAY CONTAINER
+========================================== */
+
+.overlayContainer {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100%;
+
+  margin: 0 auto;
+  padding: 0 120px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   OVERLAY HEADER
+========================================== */
+
+.overlayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 86px;
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 8px 0;
+
+  border: none;
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.closeText {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   CLOSE ICON
+========================================== */
+
+.closeIcon {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+}
+
+.closeIcon span {
+  position: absolute;
+
+  width: 18.56px;
+  height: 1.5px;
+
+  border-radius: 2px;
+
+  background-color: #ffffff;
+}
+
+.closeIcon span:first-child {
+  transform: rotate(45deg);
+}
+
+.closeIcon span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* ==========================================
+   MENU BODY
+========================================== */
+
+.menuBody {
+  display: grid;
+  grid-template-columns: 395px minmax(0, 1fr);
+  align-items: start;
+
+  column-gap: 100px;
+
+  width: 100%;
+
+  margin-top: 37px;
+}
+
+/* ==========================================
+   MENU IMAGE
+   FIGMA: 395px × 481px
+========================================== */
+
+.menuImageWrapper {
+  position: relative;
+
+  width: 395px;
+  height: 481px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background-color: #292929;
+}
+
+/* ==========================================
+   IMAGE LAYERS
+========================================== */
+
+.menuImageLayer {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  transform: scale(1.06);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.65s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.imageActive {
+  opacity: 1;
+  transform: scale(1);
+
+  z-index: 2;
+}
+
+.menuImage {
+  object-fit: cover;
+}
+
+/* ==========================================
+   MENU LINKS
+========================================== */
+
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 520px;
+
+  padding-top: 0;
+  margin-left: 220px;
+}
+
+/* ==========================================
+   MENU LINK
+   FIGMA: 36px / Outfit Medium
+========================================== */
+
+.menuLink {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 76px;
+
+  padding: 20px 24px;
+
+  box-sizing: border-box;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #999999;
+
+  background-color: transparent;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* ==========================================
+   ACTIVE / HOVER LINK
+========================================== */
+
+.menuLinkActive,
+.menuLink:hover,
+.menuLink:focus-visible {
+  color: #ffffff;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.menuLink:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+  outline-offset: -1px;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .navContainer,
+  .overlayContainer {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .menuBody {
+    column-gap: 8%;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .navContainer,
+  .overlayContainer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .menuBody {
+    grid-template-columns: 340px minmax(0, 1fr);
+    column-gap: 60px;
+  }
+
+  .menuImageWrapper {
+    width: 340px;
+    height: 430px;
+  }
+
+  .menuLink {
+    font-size: 30px;
+    min-height: 68px;
+  }
+
+  .logo,
+  .overlayLogo {
+    font-size: 32px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .navContainer,
+  .overlayContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .menuBody {
+    grid-template-columns: 280px minmax(0, 1fr);
+    column-gap: 32px;
+  }
+
+  .menuImageWrapper {
+    width: 280px;
+    height: 370px;
+  }
+
+  .menuLink {
+    font-size: 25px;
+    min-height: 60px;
+    padding: 16px;
+  }
+
+  .logo,
+  .overlayLogo {
+    font-size: 28px;
+  }
+
+  .menuLabel,
+  .closeText {
+    font-size: 17px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .navbar {
+    height: 72px;
+  }
+
+  .navContainer,
+  .overlayContainer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .overlayHeader {
+    height: 72px;
+  }
+
+  .logo,
+  .overlayLogo {
+    font-size: 25px;
+  }
+
+  .menuLabel,
+  .closeText {
+    font-size: 15px;
+  }
+
+  .menuBody {
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+    margin-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .menuImageWrapper {
+    width: 100%;
+    height: 250px;
+
+    border-radius: 16px;
+  }
+
+  .menuLinks {
+    width: 100%;
+    max-width: none;
+  }
+
+  .menuLink {
+    min-height: 58px;
+
+    font-size: 25px;
+
+    padding: 14px 12px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .navContainer,
+  .overlayContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .logo,
+  .overlayLogo {
+    font-size: 22px;
+  }
+
+  .menuImageWrapper {
+    height: 210px;
+  }
+
+  .menuLink {
+    min-height: 52px;
+    font-size: 22px;
+  }
+
+  .menuBody {
+    gap: 24px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .menuOverlay,
+  .menuImageLayer,
+  .menuLink {
+    transition: none;
+  }
+}

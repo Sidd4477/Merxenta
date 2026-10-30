@@ -1,0 +1,639 @@
+
+/* ==========================================
+   MERXENTA - EXPERTISE SECTION
+========================================== */
+
+.expertiseSection {
+  position: relative;
+
+  width: 100%;
+
+  background-color: #f5f3e9;
+  color: #202020;
+
+  overflow-anchor: none;
+}
+
+/* ==========================================
+   STICKY VIEWPORT
+========================================== */
+
+.stickyViewport {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+
+  height: 100vh;
+  height: 100svh;
+
+  overflow: hidden;
+
+  background-color: #f5f3e9;
+}
+
+/* ==========================================
+   HORIZONTAL TRACK
+========================================== */
+
+.horizontalTrack {
+  position: relative;
+
+  width: max-content;
+  height: 100%;
+
+  transform: translate3d(0, 0, 0);
+
+  will-change: transform;
+}
+
+/* ==========================================
+   FIGMA DESIGN CANVAS
+========================================== */
+
+.designCanvas {
+  position: relative;
+
+  width: 2100px;
+  height: 100%;
+
+  min-height: 700px;
+
+  background-color: #f5f3e9;
+}
+
+/* ==========================================
+   MAIN HEADING
+========================================== */
+
+.mainHeading {
+  position: absolute;
+
+  top: 80px;
+  left: 120px;
+
+  width: 397px;
+  min-height: 96px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   HEADING LINE
+========================================== */
+
+.headingLine {
+  display: flex;
+  align-items: baseline;
+
+  gap: 6px;
+
+  white-space: nowrap;
+}
+
+/* ==========================================
+   ALEX BRUSH
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   OUTFIT
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   BODY CONTENT
+========================================== */
+
+.leftContent,
+.rightContent {
+  position: absolute;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.leftContent {
+  top: 256px;
+  left: 120px;
+
+  width: 397px;
+}
+
+/* ==========================================
+   RIGHT CONTENT
+========================================== */
+
+.rightContent {
+  top: 256px;
+  left: 948px;
+
+  width: 397px;
+  min-height: 126px;
+}
+
+/* ==========================================
+   CTA BUTTON
+========================================== */
+
+.ctaButton {
+  position: absolute;
+
+  top: 441px;
+  left: 120px;
+
+  width: max-content;
+  min-width: 199px;
+  height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  padding:
+    8px
+    8px
+    8px
+    16px;
+
+  border-radius: 99px;
+
+  background-color: #202020;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ctaButton:hover {
+  background-color: #383838;
+
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   CTA TEXT
+========================================== */
+
+.ctaText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+/* ==========================================
+   CTA CIRCLE
+========================================== */
+
+.ctaCircle {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 99px;
+
+  background-color: #ffffff;
+  color: #202020;
+}
+
+/* ==========================================
+   IMAGE COMMON
+========================================== */
+
+.imageWrapper {
+  position: absolute;
+
+  overflow: hidden;
+
+  border: 5px solid #ffffff;
+  border-radius: 20px;
+
+  box-sizing: border-box;
+
+  background-color: #e7e4db;
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.04);
+
+  backface-visibility: hidden;
+}
+
+/* ==========================================
+   IMAGE CONTENT
+========================================== */
+
+.image {
+  object-fit: cover;
+
+  border-radius: 15px;
+}
+
+/* ==========================================
+   IMAGE 1
+========================================== */
+
+.imageOne {
+  top: 139px;
+  left: 639px;
+
+  width: 237.87px;
+  height: 180.35px;
+
+  transform: rotate(-9.84deg);
+
+  z-index: 2;
+}
+
+/* ==========================================
+   IMAGE 2
+========================================== */
+
+.imageTwo {
+  top: 270.2px;
+  left: 538.24px;
+
+  width: 220px;
+  height: 350px;
+
+  transform: rotate(-9.84deg);
+
+  z-index: 3;
+}
+
+/* ==========================================
+   IMAGE 3
+========================================== */
+
+.imageThree {
+  top: 459px;
+  left: 948px;
+
+  width: 397px;
+  height: 158px;
+
+  z-index: 2;
+}
+
+/* ==========================================
+   IMAGE 4
+========================================== */
+
+.imageFour {
+  top: 176px;
+  left: 1369px;
+
+  width: 220px;
+  height: 350px;
+
+  z-index: 2;
+}
+
+/* ==========================================
+   IMAGE 5
+========================================== */
+
+.imageFive {
+  top: 300px;
+  left: 1543px;
+
+  width: 220px;
+  height: 285.63px;
+
+  transform: rotate(9.18deg);
+
+  z-index: 3;
+}
+
+/* ==========================================
+   IMAGE 6
+========================================== */
+
+.imageSix {
+  top: 177px;
+  left: 1711px;
+
+  width: 281px;
+  height: 185px;
+
+  transform: rotate(-6.57deg);
+
+  z-index: 2;
+}
+
+/* ==========================================
+   SECOND HEADING
+========================================== */
+
+.secondHeading {
+  position: absolute;
+
+  top: 570px;
+  left: 1740px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  color: #202020;
+}
+
+.secondScript {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 48px;
+  font-weight: 400;
+
+  line-height: 100%;
+}
+
+.secondNormal {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 48px;
+  font-weight: 500;
+
+  line-height: 100%;
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .designCanvas {
+    min-height: 650px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .designCanvas {
+    min-height: 600px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .expertiseSection {
+    height: auto !important;
+  }
+
+  .stickyViewport {
+    position: relative;
+
+    height: auto;
+
+    overflow: visible;
+  }
+
+  .horizontalTrack {
+    width: 100%;
+    height: auto;
+
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .designCanvas {
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+    padding: 60px 20px;
+
+    box-sizing: border-box;
+  }
+
+  .mainHeading,
+  .leftContent,
+  .rightContent,
+  .ctaButton,
+  .imageWrapper,
+  .secondHeading {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    right: auto;
+    bottom: auto;
+  }
+
+  .mainHeading {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .headingLine {
+    gap: 5px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: clamp(
+      30px,
+      8vw,
+      44px
+    );
+  }
+
+  .leftContent,
+  .rightContent {
+    width: 100%;
+    min-height: auto;
+
+    font-size: 15px;
+    line-height: 145%;
+  }
+
+  .ctaButton {
+    align-self: flex-start;
+
+    min-width: 199px;
+    width: max-content;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 240px;
+
+    transform: none;
+
+    border-radius: 20px;
+  }
+
+  .imageOne {
+    height: 220px;
+  }
+
+  .imageTwo {
+    height: 340px;
+  }
+
+  .imageThree {
+    height: 200px;
+  }
+
+  .imageFour {
+    height: 320px;
+  }
+
+  .imageFive {
+    height: 260px;
+  }
+
+  .imageSix {
+    height: 220px;
+  }
+
+  .secondHeading {
+    width: 100%;
+  }
+
+  .secondScript,
+  .secondNormal {
+    font-size: clamp(
+      30px,
+      8vw,
+      44px
+    );
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .designCanvas {
+    padding: 50px 16px;
+    gap: 24px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: clamp(
+      28px,
+      8vw,
+      38px
+    );
+  }
+
+  .leftContent,
+  .rightContent {
+    font-size: 14px;
+  }
+
+  .imageOne {
+    height: 190px;
+  }
+
+  .imageTwo {
+    height: 300px;
+  }
+
+  .imageThree {
+    height: 180px;
+  }
+
+  .imageFour {
+    height: 300px;
+  }
+
+  .imageFive {
+    height: 240px;
+  }
+
+  .imageSix {
+    height: 190px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .horizontalTrack {
+    will-change: auto;
+  }
+
+  .ctaButton {
+    transition: none;
+  }
+}

@@ -1,0 +1,558 @@
+
+/* ==========================================
+   MERXENTA - FAQ SECTION
+========================================== */
+
+.faqSection {
+  position: relative;
+  width: 100%;
+  background-color: #f5f3e9;
+  color: #202020;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 724px);
+  align-items: start;
+  column-gap: 48px;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 120px 100px;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+}
+
+/* ==========================================
+   MAIN HEADING
+   Outfit Medium - 48px
+========================================== */
+
+.headingArea {
+  width: 100%;
+}
+
+.mainHeading {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+
+  color: #202020;
+}
+
+/* ==========================================
+   HEADING DESCRIPTION
+   Outfit Regular - 16px
+========================================== */
+
+.headingDescription {
+  margin: 16px 0 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   CONTACT US LINK
+========================================== */
+
+.contactLink {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #202020;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #9d2177;
+}
+
+.contactLink:focus-visible {
+  outline: 2px solid #9d2177;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   FAQ IMAGE
+   Figma: 274px × 294px
+========================================== */
+
+.imageWrapper {
+  position: relative;
+
+  width: 274px;
+  height: 294px;
+
+  margin-top: 48px;
+}
+
+.faqImage {
+  display: block;
+  width: 274px;
+  height: 294px;
+  object-fit: contain;
+}
+
+/* ==========================================
+   FAQ LIST
+========================================== */
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   FAQ ITEM
+   Figma:
+   Width: 724px
+   Height: 82px
+   Radius: 15px
+   Border: 1px
+========================================== */
+
+.faqItem {
+  width: 100%;
+  min-height: 82px;
+
+  overflow: hidden;
+
+  border: 1px solid #dedbd1;
+  border-radius: 15px;
+
+  background-color: transparent;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* ==========================================
+   OPEN FAQ - GRADIENT BACKGROUND
+   ONLY UPDATED STYLING
+========================================== */
+
+.faqItemOpen {
+  border-color: #9d2177;
+
+  background-color: #9d2177;
+
+  background-image: linear-gradient(
+    135deg,
+    #b72b8d 0%,
+    #9d2177 50%,
+    #741653 100%
+  );
+}
+
+/* ==========================================
+   FAQ QUESTION
+========================================== */
+
+.questionHeading {
+  margin: 0;
+  padding: 0;
+}
+
+.faqQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  width: 100%;
+  min-height: 80px;
+
+  padding: 24px 32px;
+
+  border: none;
+  background: transparent;
+
+  text-align: left;
+  color: #202020;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   QUESTION TEXT
+   Outfit Medium - 20px
+========================================== */
+
+.questionText {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+
+  color: #202020;
+}
+
+/* ==========================================
+   OPEN FAQ - QUESTION TEXT
+========================================== */
+
+.faqItemOpen .questionText {
+  color: #ffffff;
+}
+
+/* ==========================================
+   PLUS / MINUS ICON
+   Width: 16px
+   Height: 16px
+   Border Thickness: 2px
+========================================== */
+
+.iconWrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+
+  color: #202020;
+}
+
+/* ==========================================
+   OPEN FAQ - WHITE ICON
+========================================== */
+
+.faqItemOpen .iconWrapper {
+  color: #ffffff;
+}
+
+/* Horizontal Line */
+
+.iconHorizontal {
+  position: absolute;
+
+  width: 16px;
+  height: 2px;
+
+  border-radius: 2px;
+  background-color: currentColor;
+}
+
+/* Vertical Line */
+
+.iconVertical {
+  position: absolute;
+
+  width: 2px;
+  height: 16px;
+
+  border-radius: 2px;
+  background-color: currentColor;
+
+  transition: transform 0.3s ease;
+}
+
+/* Plus changes to minus */
+
+.iconOpen .iconVertical {
+  transform: rotate(90deg);
+}
+
+/* ==========================================
+   FAQ ANSWER ANIMATION
+========================================== */
+
+.answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 0.35s ease,
+    opacity 0.3s ease;
+}
+
+.answerOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.answerInner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ==========================================
+   FAQ ANSWER TEXT
+   Outfit Regular - 16px
+========================================== */
+
+.answerText {
+  margin: 0;
+  padding: 0 32px 28px;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #696969;
+}
+
+/* ==========================================
+   OPEN FAQ - ANSWER TEXT
+========================================== */
+
+.faqItemOpen .answerText {
+  color: #ffffff;
+}
+
+/* ==========================================
+   HOVER EFFECTS
+========================================== */
+
+@media (hover: hover) {
+  .faqItem:hover {
+    border-color: #b8b3aa;
+  }
+
+  .faqItemOpen:hover {
+    border-color: #9d2177;
+  }
+}
+
+/* ==========================================
+   SMALL LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    column-gap: 36px;
+
+    padding: 72px 72px 90px;
+  }
+
+  .faqQuestion {
+    padding: 22px 24px;
+  }
+
+  .answerText {
+    padding: 0 24px 24px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    column-gap: 28px;
+
+    padding: 64px 40px 80px;
+  }
+
+  .mainHeading {
+    font-size: 42px;
+  }
+
+  .headingDescription,
+  .contactLink {
+    font-size: 14px;
+  }
+
+  .imageWrapper {
+    width: 220px;
+    height: 236px;
+    margin-top: 40px;
+  }
+
+  .faqImage {
+    width: 220px;
+    height: 236px;
+  }
+
+  .faqList {
+    gap: 14px;
+  }
+
+  .faqItem {
+    min-height: 76px;
+  }
+
+  .faqQuestion {
+    min-height: 74px;
+    padding: 20px;
+  }
+
+  .questionText {
+    font-size: 17px;
+  }
+
+  .answerText {
+    padding: 0 20px 22px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+
+    padding: 60px 24px 72px;
+  }
+
+  .mainHeading {
+    font-size: 38px;
+  }
+
+  .headingDescription,
+  .contactLink {
+    font-size: 14px;
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 215px;
+    margin-top: 28px;
+  }
+
+  .faqImage {
+    width: 200px;
+    height: 215px;
+  }
+
+  .faqList {
+    gap: 12px;
+  }
+
+  .faqItem {
+    min-height: 72px;
+  }
+
+  .faqQuestion {
+    min-height: 70px;
+    padding: 18px 20px;
+    gap: 16px;
+  }
+
+  .questionText {
+    font-size: 16px;
+  }
+
+  .answerText {
+    padding: 0 20px 22px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .mainHeading {
+    font-size: 34px;
+  }
+
+  .headingDescription,
+  .contactLink {
+    font-size: 13px;
+  }
+
+  .imageWrapper {
+    width: 180px;
+    height: 193px;
+  }
+
+  .faqImage {
+    width: 180px;
+    height: 193px;
+  }
+
+  .faqQuestion {
+    padding: 16px;
+  }
+
+  .questionText {
+    font-size: 15px;
+  }
+
+  .answerText {
+    padding: 0 16px 20px;
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.faqQuestion:focus-visible {
+  outline: 2px solid #9d2177;
+  outline-offset: -4px;
+  border-radius: 15px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faqItem,
+  .contactLink,
+  .iconVertical,
+  .answerWrapper {
+    transition: none;
+  }
+}

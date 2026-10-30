@@ -1,0 +1,432 @@
+
+/* ==========================================
+   MERXENTA - GROUP LEADERSHIP
+========================================== */
+
+.leadershipSection {
+  position: relative;
+  width: 100%;
+  background-color: #f5f3e9;
+  color: #202020;
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 120px 100px;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN HEADING
+========================================== */
+
+.mainHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
+  width: 100%;
+  margin: 0 0 40px;
+  padding: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   OUTFIT HEADING
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   ALEX BRUSH HEADING
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   LEADERSHIP CARDS GRID
+========================================== */
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* ==========================================
+   LEADER CARD
+   FIGMA: 384px × 472px
+========================================== */
+
+.leaderCard {
+  position: relative;
+  width: 100%;
+  height: 472px;
+
+  overflow: hidden;
+  border-radius: 20px;
+
+  background-color: #e9e6df;
+  isolation: isolate;
+  cursor: pointer;
+}
+
+/* ==========================================
+   LEADER IMAGE
+========================================== */
+
+.leaderImage {
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s cubic-bezier(
+    0.22, 1, 0.36, 1
+  );
+}
+
+.leaderCard:hover .leaderImage,
+.cardActive .leaderImage {
+  transform: scale(1.035);
+}
+
+/* ==========================================
+   WHITE HOVER PANEL
+   FIGMA HEIGHT: 168px
+========================================== */
+
+.hoverPanel {
+  position: absolute;
+  z-index: 2;
+
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+
+  height: 168px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  border-radius: 16px;
+  background-color: #ffffff;
+
+  opacity: 0;
+
+  transform: translateY(
+    calc(100% + 20px)
+  );
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.55s cubic-bezier(
+      0.22, 1, 0.36, 1
+    );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   HOVER PANEL OPEN
+========================================== */
+
+.leaderCard:hover .hoverPanel,
+.cardActive .hoverPanel,
+.leaderCard:focus-within .hoverPanel {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ==========================================
+   LEADER INFORMATION
+========================================== */
+
+.leaderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  min-width: 0;
+  padding-bottom: 2px;
+}
+
+/* ==========================================
+   LEADER NAME
+   OUTFIT MEDIUM - 24px
+========================================== */
+
+.leaderName {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   DESIGNATION
+   OUTFIT REGULAR - 16px
+========================================== */
+
+.designation {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  color: #202020;
+}
+
+.socialIcon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 72px 6% 90px;
+  }
+
+  .cardsGrid {
+    gap: 20px;
+  }
+
+  .leaderCard {
+    height: 420px;
+  }
+
+  .leaderName {
+    font-size: 21px;
+  }
+
+  .designation {
+    font-size: 14px;
+  }
+
+  .hoverPanel {
+    height: 150px;
+    padding: 16px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 64px 40px 80px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 42px;
+  }
+
+  .cardsGrid {
+    gap: 16px;
+  }
+
+  .leaderCard {
+    height: 350px;
+  }
+
+  .hoverPanel {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    height: 135px;
+    padding: 12px;
+  }
+
+  .leaderName {
+    font-size: 18px;
+  }
+
+  .designation {
+    font-size: 12px;
+  }
+
+  .socialIcon,
+  .socialIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 24px 72px;
+  }
+
+  .mainHeading {
+    margin-bottom: 28px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 38px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .leaderCard {
+    width: 100%;
+    height: 472px;
+  }
+
+  .hoverPanel {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+
+    height: 168px;
+    padding: 20px;
+  }
+
+  .leaderName {
+    font-size: 24px;
+  }
+
+  .designation {
+    font-size: 16px;
+  }
+
+  .socialIcon,
+  .socialIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 34px;
+  }
+
+  .leaderCard {
+    height: 420px;
+  }
+
+  .hoverPanel {
+    height: 150px;
+    padding: 16px;
+  }
+
+  .leaderName {
+    font-size: 21px;
+  }
+
+  .designation {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .leaderImage,
+  .hoverPanel {
+    transition: none;
+  }
+}

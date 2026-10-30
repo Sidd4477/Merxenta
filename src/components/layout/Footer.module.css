@@ -1,0 +1,651 @@
+
+/* ==========================================
+   MERXENTA - FOOTER
+========================================== */
+
+.footer {
+  width: 100%;
+  background-color: #f5f3e9;
+  color: #202020;
+  font-family: "Outfit", sans-serif;
+}
+
+/* ==========================================
+   NEWSLETTER SECTION
+   Figma: 1440px × 291px
+========================================== */
+
+.newsletterSection {
+  width: 100%;
+  min-height: 291px;
+  background-color: #9d2177;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.newsletterContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+
+  width: 100%;
+  max-width: 1440px;
+  min-height: 291px;
+  margin: 0 auto;
+  padding: 80px 120px;
+}
+
+/* ==========================================
+   NEWSLETTER HEADING
+   Outfit Medium - 36px
+========================================== */
+
+.newsletterHeading {
+  width: 100%;
+  max-width: 620px;
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.015em;
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   NEWSLETTER RIGHT
+========================================== */
+
+.newsletterRight {
+  width: 336px;
+  flex: 0 0 336px;
+}
+
+.newsletterSubheading {
+  margin: 0 0 16px;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.005em;
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   EMAIL INPUT
+   336px × 52px
+   Radius: 99px
+========================================== */
+
+.newsletterForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  width: 336px;
+  height: 52px;
+
+  padding: 12px 8px 12px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 99px;
+
+  background-color: transparent;
+}
+
+.emailInput {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+
+  color: #ffffff;
+}
+
+.emailInput::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+}
+
+.newsletterForm:focus-within {
+  border-color: #ffffff;
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   SUBSCRIBE BUTTON
+   36px × 36px
+========================================== */
+
+.subscribeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  border: none;
+  border-radius: 99px;
+
+  background-color: #ffffff;
+  color: #9d2177;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.subscribeButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.subscribeButton:hover {
+  background-color: #f5f3e9;
+  transform: translateX(2px);
+}
+
+.formMessage {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 130%;
+  color: #ffffff;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================
+   MAIN FOOTER
+========================================== */
+
+.footerMain {
+  width: 100%;
+  background-color: #f5f3e9;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 64px;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 120px;
+}
+
+/* ==========================================
+   BRAND COLUMN
+========================================== */
+
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 340px;
+  flex: 0 1 340px;
+}
+
+.logoLink {
+  display: inline-flex;
+  width: 140px;
+  height: 124px;
+}
+
+.logo {
+  display: block;
+  width: 140px;
+  height: 124px;
+  object-fit: contain;
+}
+
+/* ==========================================
+   BRAND DESCRIPTION
+   Outfit Regular - 14px
+========================================== */
+
+.brandDescription {
+  max-width: 340px;
+  margin: 16px 0 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+
+  padding: 7px;
+
+  border: 1px solid #dedbd1;
+  border-radius: 99px;
+
+  color: #202020;
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.socialIcon svg {
+  width: 13.33px;
+  height: 13.33px;
+}
+
+.socialIcon:hover {
+  background-color: #9d2177;
+  border-color: #9d2177;
+  color: #ffffff;
+}
+
+/* ==========================================
+   FOOTER NAVIGATION
+========================================== */
+
+.footerNavigation {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* ==========================================
+   FOOTER LINK COLUMN
+   Figma: 146px
+========================================== */
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 146px;
+  min-height: 180px;
+
+  padding-left: 16px;
+  border-left: 1px solid #dedbd1;
+}
+
+/* ==========================================
+   LINK HEADING
+   Outfit Medium - 20px
+========================================== */
+
+.linkHeading {
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+
+  color: #202020;
+}
+
+/* ==========================================
+   LINK LIST
+========================================== */
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ==========================================
+   FOOTER LINKS
+   Outfit Regular - 14px
+========================================== */
+
+.footerLink {
+  display: inline-block;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #202020;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: #9d2177;
+}
+
+/* ==========================================
+   FOOTER BOTTOM
+   Figma: 1440px × 97px
+========================================== */
+
+.footerBottom {
+  width: 100%;
+  min-height: 97px;
+
+  border-top: 1px solid #dedbd1;
+  background-color: #f5f3e9;
+}
+
+.bottomContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1440px;
+  min-height: 97px;
+
+  margin: 0 auto;
+  padding: 24px 120px;
+}
+
+/* ==========================================
+   BOTTOM TEXT
+   Outfit Regular - 14px
+========================================== */
+
+.copyright,
+.poweredBy,
+.cookieButton {
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+.poweredName {
+  color: inherit;
+}
+
+.cookieButton {
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.cookieButton:hover {
+  color: #9d2177;
+}
+
+/* ==========================================
+   SMALL LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .newsletterContainer {
+    padding: 72px 72px;
+    gap: 48px;
+  }
+
+  .newsletterHeading {
+    font-size: 32px;
+  }
+
+  .newsletterSubheading {
+    font-size: 21px;
+  }
+
+  .footerContainer {
+    padding: 72px 72px;
+    gap: 36px;
+  }
+
+  .footerNavigation {
+    gap: 12px;
+  }
+
+  .linkColumn {
+    width: 130px;
+  }
+
+  .bottomContainer {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .newsletterContainer {
+    padding: 64px 40px;
+    gap: 32px;
+  }
+
+  .newsletterHeading {
+    font-size: 28px;
+  }
+
+  .newsletterRight {
+    width: 300px;
+    flex-basis: 300px;
+  }
+
+  .newsletterSubheading {
+    font-size: 19px;
+  }
+
+  .newsletterForm {
+    width: 100%;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    gap: 48px;
+    padding: 64px 40px;
+  }
+
+  .brandColumn {
+    width: 100%;
+    flex: none;
+  }
+
+  .footerNavigation {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .linkColumn {
+    flex: 1;
+    width: auto;
+  }
+
+  .bottomContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .newsletterContainer {
+    flex-direction: column;
+    gap: 32px;
+
+    padding: 60px 24px;
+  }
+
+  .newsletterHeading {
+    max-width: 100%;
+    font-size: 28px;
+  }
+
+  .newsletterRight {
+    width: 100%;
+    flex: none;
+  }
+
+  .newsletterSubheading {
+    font-size: 20px;
+  }
+
+  .newsletterForm {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .footerContainer {
+    padding: 60px 24px;
+    gap: 48px;
+  }
+
+  .footerNavigation {
+    flex-wrap: wrap;
+    gap: 32px 16px;
+  }
+
+  .linkColumn {
+    flex: 0 1 calc(50% - 8px);
+    min-height: auto;
+  }
+
+  .bottomContainer {
+    flex-wrap: wrap;
+    gap: 16px;
+
+    padding: 28px 24px;
+  }
+
+  .copyright,
+  .poweredBy,
+  .cookieButton {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .newsletterContainer {
+    padding: 56px 20px;
+  }
+
+  .newsletterHeading {
+    font-size: 25px;
+  }
+
+  .newsletterSubheading {
+    font-size: 18px;
+  }
+
+  .emailInput {
+    font-size: 14px;
+  }
+
+  .footerContainer {
+    padding: 56px 20px;
+  }
+
+  .brandDescription {
+    font-size: 13px;
+  }
+
+  .linkHeading {
+    font-size: 18px;
+  }
+
+  .footerLink {
+    font-size: 13px;
+  }
+
+  .bottomContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .subscribeButton,
+  .socialIcon,
+  .footerLink,
+  .cookieButton {
+    transition: none;
+  }
+
+  .subscribeButton:hover {
+    transform: none;
+  }
+}

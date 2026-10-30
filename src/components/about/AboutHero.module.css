@@ -1,0 +1,418 @@
+
+/* ==========================================
+   MERXENTA - ABOUT HERO
+========================================== */
+
+.aboutHero {
+  position: relative;
+
+  width: 100%;
+  min-height: 700px;
+
+  background-color: #f5f3e9;
+  color: #202020;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   HERO CONTAINER
+========================================== */
+
+.heroContainer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1440px;
+  min-height: 700px;
+
+  margin: 0 auto;
+  padding: 185px 24px 100px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN HEADING
+   FIGMA: 1123px x 192px
+========================================== */
+
+.mainHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1123px;
+
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+
+  text-align: center;
+  color: #202020;
+}
+
+/* ==========================================
+   HEADING LINE
+========================================== */
+
+.headingLine {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  gap: 16px;
+
+  width: 100%;
+
+  white-space: nowrap;
+}
+
+/* ==========================================
+   ALEX BRUSH
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 96px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   OUTFIT
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 96px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   SUBHEADING
+   FIGMA: 716px x 63px
+========================================== */
+
+.subheading {
+  width: 100%;
+  max-width: 716px;
+
+  min-height: 63px;
+
+  margin: 16px 0 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  text-align: center;
+  color: #202020;
+}
+
+/* ==========================================
+   BUTTON GROUP
+========================================== */
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-top: 24px;
+}
+
+/* ==========================================
+   PRIMARY BUTTON
+   OUR BUSINESSES
+========================================== */
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  min-width: 171px;
+  height: 48px;
+
+  padding: 8px 8px 8px 16px;
+
+  border: none;
+  border-radius: 99px;
+
+  background-color: #202020;
+  color: #ffffff;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.primaryButton:hover {
+  background-color: #383838;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   PRIMARY BUTTON TEXT
+========================================== */
+
+.primaryButtonText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+/* ==========================================
+   ARROW CIRCLE
+========================================== */
+
+.arrowCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  border-radius: 99px;
+
+  background-color: #ffffff;
+  color: #202020;
+}
+
+/* ==========================================
+   SECONDARY BUTTON
+   LIFE AT MERXENTA
+========================================== */
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 152px;
+  height: 48px;
+
+  padding: 14px 16px;
+
+  border: 1px solid #202020;
+  border-radius: 99px;
+
+  background-color: transparent;
+  color: #202020;
+
+  box-sizing: border-box;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #202020;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .scriptText,
+  .normalText {
+    font-size: clamp(64px, 6.65vw, 96px);
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .aboutHero,
+  .heroContainer {
+    min-height: 650px;
+  }
+
+  .heroContainer {
+    padding-top: 175px;
+  }
+
+  .headingLine {
+    gap: 12px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: clamp(54px, 6.5vw, 78px);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .aboutHero,
+  .heroContainer {
+    min-height: 600px;
+  }
+
+  .heroContainer {
+    padding-top: 160px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: clamp(42px, 6.4vw, 64px);
+  }
+
+  .subheading {
+    max-width: 600px;
+    font-size: 15px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .aboutHero,
+  .heroContainer {
+    min-height: 560px;
+  }
+
+  .heroContainer {
+    padding: 155px 20px 80px;
+  }
+
+  .headingLine {
+    flex-wrap: wrap;
+    gap: 6px;
+
+    white-space: normal;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: clamp(34px, 7.8vw, 52px);
+  }
+
+  .subheading {
+    min-height: auto;
+
+    margin-top: 24px;
+
+    font-size: 14px;
+    line-height: 145%;
+  }
+
+  .buttonGroup {
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 28px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    height: 44px;
+  }
+
+  .primaryButtonText,
+  .secondaryButton {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .heroContainer {
+    padding: 145px 16px 70px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: clamp(29px, 8vw, 38px);
+  }
+
+  .subheading {
+    font-size: 13px;
+  }
+
+  .buttonGroup {
+    gap: 10px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .secondaryButton {
+    transition: none;
+  }
+}

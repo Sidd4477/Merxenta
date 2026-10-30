@@ -1,0 +1,515 @@
+
+/* ==========================================
+   MERXENTA - REVEAL SECTION
+========================================== */
+
+.revealSection {
+  position: relative;
+  width: 100%;
+
+  /*
+   * Existing scroll distance unchanged.
+   */
+  height: 330vh;
+
+  background-color: #f5f3e9;
+  color: #202020;
+
+  overflow-anchor: none;
+}
+
+/* ==========================================
+   COMPACT SECTION
+========================================== */
+
+.compactSection {
+  height: 100vh;
+  height: 100svh;
+}
+
+/* ==========================================
+   STICKY VIEWPORT
+========================================== */
+
+.stickyViewport {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  height: 100vh;
+  height: 100svh;
+
+  overflow: hidden;
+
+  background-color: #f5f3e9;
+}
+
+/* ==========================================
+   REVEAL CANVAS
+========================================== */
+
+.revealCanvas {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+
+  height: 650px;
+  max-height: calc(100svh - 32px);
+
+  margin: 0 auto;
+
+  /*
+   * Existing upward shift unchanged.
+   */
+  transform: translateY(-16px);
+}
+
+/* ==========================================
+   STAGES
+========================================== */
+
+.stage {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   MAIN HEADING
+========================================== */
+
+.mainHeading {
+  position: absolute;
+  z-index: 3;
+
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  gap: 18px;
+
+  width: max-content;
+  max-width: 90%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #202020;
+  white-space: nowrap;
+
+  opacity: var(--reveal, 0);
+
+  transform:
+    translate(-50%, -50%)
+    translateY(
+      calc(
+        (1 - var(--reveal, 0)) * 24px
+      )
+    )
+    scale(
+      calc(
+        0.9 + var(--reveal, 0) * 0.1
+      )
+    );
+
+  will-change: transform, opacity;
+}
+
+/* ==========================================
+   ALEX BRUSH
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 96px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   OUTFIT
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 96px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   REVEAL IMAGES
+========================================== */
+
+.revealImage {
+  position: absolute;
+  z-index: 2;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  /*
+   * Smooth image reveal from canvas center.
+   */
+  opacity: var(--reveal, 0);
+
+  transform:
+    translate(
+      calc(
+        (1 - var(--reveal, 0)) *
+        var(--start-x, 0px)
+      ),
+      calc(
+        (1 - var(--reveal, 0)) *
+        var(--start-y, 0px)
+      )
+    )
+    scale(
+      calc(
+        0.55 + var(--reveal, 0) * 0.45
+      )
+    );
+
+  /*
+   * Avoid animated blur repaint cost.
+   * Keep animation on transform and opacity.
+   */
+  will-change: transform, opacity;
+
+  backface-visibility: hidden;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ==========================================
+   TOP LEFT
+========================================== */
+
+.imageTopLeft {
+  top: 81px;
+  left: 194px;
+
+  width: 235px;
+  height: 236px;
+}
+
+/* ==========================================
+   TOP RIGHT
+========================================== */
+
+.imageTopRight {
+  top: 81px;
+  left: 1055px;
+
+  width: 225px;
+  height: 235px;
+}
+
+/* ==========================================
+   BOTTOM LEFT - FIXED POSITION
+========================================== */
+
+.imageBottomLeft {
+  top: 395px;
+  left: 355px;
+
+  width: 236px;
+  height: 235px;
+}
+
+/* ==========================================
+   BOTTOM RIGHT - FIXED POSITION
+========================================== */
+
+.imageBottomRight {
+  top: 375px;
+  left: 989px;
+
+  width: 235px;
+  height: 235px;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .imageTopLeft {
+    left: 13.47%;
+  }
+
+  .imageTopRight {
+    left: auto;
+    right: 11.11%;
+  }
+
+  .imageBottomLeft {
+    left: 24.65%;
+  }
+
+  .imageBottomRight {
+    left: auto;
+    right: 15%;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .revealCanvas {
+    height: 650px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 80px;
+  }
+
+  .revealImage {
+    width: 190px;
+    height: 190px;
+  }
+
+  .imageTopLeft,
+  .imageTopRight {
+    top: 65px;
+  }
+
+  .imageBottomLeft,
+  .imageBottomRight {
+    top: 395px;
+  }
+
+  .imageTopLeft {
+    left: 10%;
+  }
+
+  .imageTopRight {
+    right: 10%;
+  }
+
+  .imageBottomLeft {
+    left: 22%;
+  }
+
+  .imageBottomRight {
+    right: 16%;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .revealCanvas {
+    height: 600px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 66px;
+  }
+
+  .revealImage {
+    width: 160px;
+    height: 160px;
+
+    border-radius: 16px;
+  }
+
+  .image {
+    border-radius: 16px;
+  }
+
+  .imageTopLeft,
+  .imageTopRight {
+    top: 70px;
+  }
+
+  .imageBottomLeft,
+  .imageBottomRight {
+    top: 370px;
+  }
+
+  .imageTopLeft {
+    left: 8%;
+  }
+
+  .imageTopRight {
+    right: 8%;
+  }
+
+  .imageBottomLeft {
+    left: 18%;
+  }
+
+  .imageBottomRight {
+    right: 12%;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .revealSection {
+    height: 350svh;
+  }
+
+  .compactSection {
+    height: 100svh;
+  }
+
+  .revealCanvas {
+    height: 100%;
+    max-height: 680px;
+
+    transform: none;
+  }
+
+  .mainHeading {
+    gap: 10px;
+    max-width: 95%;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: clamp(
+      42px,
+      10vw,
+      60px
+    );
+  }
+
+  .revealImage {
+    width: 130px;
+    height: 140px;
+
+    border-radius: 14px;
+  }
+
+  .image {
+    border-radius: 14px;
+  }
+
+  .imageTopLeft {
+    top: 12%;
+    left: 7%;
+  }
+
+  .imageTopRight {
+    top: 12%;
+    right: 7%;
+  }
+
+  .imageBottomLeft {
+    top: auto;
+    bottom: 12%;
+    left: 12%;
+  }
+
+  .imageBottomRight {
+    top: auto;
+    bottom: 12%;
+    right: 9%;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .scriptText,
+  .normalText {
+    font-size: clamp(
+      36px,
+      10vw,
+      46px
+    );
+  }
+
+  .mainHeading {
+    gap: 8px;
+  }
+
+  .revealImage {
+    width: 110px;
+    height: 120px;
+  }
+
+  .imageTopLeft {
+    top: 16%;
+    left: 6%;
+  }
+
+  .imageTopRight {
+    top: 16%;
+    right: 6%;
+  }
+
+  .imageBottomLeft {
+    bottom: 17%;
+    left: 10%;
+  }
+
+  .imageBottomRight {
+    bottom: 17%;
+    right: 8%;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE
+========================================== */
+
+@media (max-width: 360px) {
+  .scriptText,
+  .normalText {
+    font-size: 34px;
+  }
+
+  .revealImage {
+    width: 95px;
+    height: 105px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .revealImage {
+    filter: none;
+  }
+}

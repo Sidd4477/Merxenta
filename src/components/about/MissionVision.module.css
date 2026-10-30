@@ -1,0 +1,445 @@
+
+/* ==========================================
+   MERXENTA - MISSION & VISION
+========================================== */
+
+.missionVisionSection {
+  position: relative;
+
+  width: 100%;
+
+  background-color: #f5f3e9;
+  color: #202020;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 80px 120px 100px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN HEADING
+   FIGMA: 1200px × 48px
+========================================== */
+
+.mainHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  gap: 12px;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 48px;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+
+  text-align: center;
+  color: #202020;
+}
+
+/* ==========================================
+   HEADING MEDIUM
+========================================== */
+
+.headingMedium {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   AMPERSAND
+========================================== */
+
+.headingAmpersand {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   CARDS WRAPPER
+========================================== */
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+
+  width: 100%;
+
+  margin-top: 40px;
+}
+
+/* ==========================================
+   COMMON CARD STYLING
+   FIGMA: 588px × 315px
+========================================== */
+
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 315px;
+
+  overflow: hidden;
+
+  border: 1px solid #dedbd1;
+  border-radius: 20px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MISSION CARD
+========================================== */
+
+.missionCard {
+  background-color: transparent;
+  color: #202020;
+}
+
+/* ==========================================
+   VISION CARD
+   EXISTING PINK GRADIENT UNCHANGED
+========================================== */
+
+.visionCard {
+  position: relative;
+
+  background-color: #c72a97;
+
+  background-image: linear-gradient(
+    135deg,
+    #c72a97 0%,
+    #d342a6 45%,
+    #a91d7f 100%
+  );
+
+  border-color: #c72a97;
+
+  color: #ffffff;
+
+  isolation: isolate;
+}
+
+/* ==========================================
+   VISION WHITE GRADIENT BOXES
+   REFERENCE: HOME VISION SECTION
+========================================== */
+
+.decorativeGrid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  z-index: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+
+  gap: 4px;
+
+  width: 100%;
+  height: 70%;
+
+  opacity: 0.18;
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   INDIVIDUAL WHITE GRADIENT BOX
+========================================== */
+
+.decorativeGrid span {
+  min-width: 0;
+  min-height: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+/* ==========================================
+   CARD CONTENT
+   FIGMA PADDING:
+   32px 32px 60px 32px
+========================================== */
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 315px;
+
+  padding: 32px 32px 60px;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   CARD LABEL
+   OUTFIT REGULAR - 16px
+========================================== */
+
+.cardLabel {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: inherit;
+}
+
+/* ==========================================
+   CARD MAIN TEXT
+   OUTFIT MEDIUM - 24px
+========================================== */
+
+.cardTitle {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: -0.005em;
+
+  color: inherit;
+}
+
+/* ==========================================
+   CARD DESCRIPTION
+   OUTFIT REGULAR - 16px
+========================================== */
+
+.cardDescription {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 120%;
+  letter-spacing: -0.02em;
+
+  color: inherit;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 72px 6% 90px;
+  }
+
+  .cardsWrapper {
+    gap: 20px;
+  }
+
+  .cardContent {
+    padding: 28px 28px 50px;
+  }
+
+  .cardTitle {
+    font-size: 21px;
+  }
+
+  .cardDescription {
+    font-size: 15px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 64px 40px 80px;
+  }
+
+  .mainHeading,
+  .headingMedium,
+  .headingAmpersand {
+    font-size: 42px;
+  }
+
+  .cardsWrapper {
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .card {
+    min-height: 300px;
+  }
+
+  .cardContent {
+    min-height: 300px;
+    padding: 24px;
+  }
+
+  .cardTitle {
+    font-size: 19px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 24px 72px;
+  }
+
+  .mainHeading,
+  .headingMedium,
+  .headingAmpersand {
+    font-size: 38px;
+  }
+
+  .cardsWrapper {
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    margin-top: 28px;
+  }
+
+  .card {
+    min-height: auto;
+  }
+
+  .cardContent {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .mainHeading,
+  .headingMedium,
+  .headingAmpersand {
+    font-size: 34px;
+  }
+
+  .mainHeading {
+    gap: 8px;
+  }
+
+  .cardContent {
+    padding: 20px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardLabel,
+  .cardDescription {
+    font-size: 13px;
+  }
+}

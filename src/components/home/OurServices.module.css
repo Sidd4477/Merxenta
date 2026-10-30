@@ -1,0 +1,422 @@
+
+/* ==========================================
+   MERXENTA - OUR SERVICES SECTION
+========================================== */
+
+.servicesSection {
+  position: relative;
+  width: 100%;
+  background-color: #f5f3e9;
+  color: #202020;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 120px 100px;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.headingArea {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.mainHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #202020;
+  white-space: nowrap;
+}
+
+/* Outfit Medium - 48px */
+
+.headingNormal {
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* Alex Brush - 48px */
+
+.headingScript {
+  font-family: "Alex Brush", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   HEADING DESCRIPTION
+========================================== */
+
+.headingDescription {
+  max-width: 850px;
+  margin-top: 16px;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #696969;
+}
+
+/* ==========================================
+   SERVICES LIST
+========================================== */
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ==========================================
+   SERVICE ROW
+   Hover highlight area expanded
+========================================== */
+
+.serviceRow {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 64px 0.65fr 1.6fr;
+  align-items: center;
+  column-gap: 24px;
+
+  width: calc(100% + 80px);
+  min-height: 132px;
+
+  margin-left: -20px;
+
+  padding: 24px 40px;
+
+  border-radius: 0;
+  background-color: transparent;
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ==========================================
+   SERVICE NUMBER
+========================================== */
+
+.serviceNumber {
+  position: relative;
+  z-index: 2;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+
+  color: #696969;
+
+  transition:
+    font-size 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ==========================================
+   SERVICE NAME
+========================================== */
+
+.serviceName {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.005em;
+
+  color: #696969;
+
+  transition: color 0.3s ease;
+}
+
+/* ==========================================
+   SERVICE DESCRIPTION
+   Full text visible
+========================================== */
+
+
+.serviceDescription {
+  position: relative;
+  z-index: 6;
+
+  margin: 0;
+  margin-left:75px;
+  max-width: none;
+  min-width: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #696969;
+
+  display: block;
+  overflow: visible;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* ==========================================
+   HOVER IMAGE WRAPPER
+========================================== */
+
+.imageWrapper {
+  position: absolute;
+  z-index: 5;
+
+  top: -72px;
+  left: 313px;
+
+  width: 180px;
+  height: 250px;
+
+  border-radius: 15px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: rotate(15deg);
+  transform-origin: center;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.serviceImage {
+  display: block;
+
+  width: 180px;
+  height: 250px;
+
+  border-radius: 15px;
+  object-fit: cover;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================================
+   HOVER EFFECTS
+   Background highlight only
+========================================== */
+
+@media (hover: hover) {
+  .serviceRow:hover {
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+
+  .serviceRow:hover .serviceNumber {
+    font-size: 40px;
+    color: #202020;
+  }
+
+  .serviceRow:hover .serviceName {
+    color: #202020;
+  }
+
+  .serviceRow:hover .imageWrapper {
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(-15deg);
+  }
+}
+
+/* ==========================================
+   SMALL LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 72px 72px 90px;
+  }
+
+  .serviceRow {
+    grid-template-columns: 58px 1fr 1.25fr;
+    column-gap: 20px;
+  }
+
+  .serviceName {
+    font-size: 22px;
+  }
+
+  .serviceDescription {
+    font-size: 15px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 64px 40px 80px;
+  }
+
+  .headingArea {
+    margin-bottom: 36px;
+  }
+
+  .headingNormal,
+  .headingScript {
+    font-size: 42px;
+  }
+
+  .serviceRow {
+    grid-template-columns: 52px 1fr 1.4fr;
+    column-gap: 16px;
+    min-height: 120px;
+    padding: 20px 14px;
+  }
+
+  .serviceNumber {
+    font-size: 28px;
+  }
+
+  .serviceName {
+    font-size: 20px;
+  }
+
+  .serviceDescription {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 24px 72px;
+  }
+
+  .headingArea {
+    margin-bottom: 28px;
+  }
+
+  .headingNormal,
+  .headingScript {
+    font-size: 38px;
+  }
+
+  .headingDescription {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .serviceRow {
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 12px;
+
+    min-height: auto;
+    padding: 22px 12px;
+  }
+
+  .serviceNumber {
+    font-size: 24px;
+  }
+
+  .serviceName {
+    font-size: 20px;
+  }
+
+  .serviceDescription {
+    grid-column: 2;
+
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 140%;
+  }
+
+  .imageWrapper {
+    display: none;
+  }
+
+  @media (hover: hover) {
+    .serviceRow:hover .serviceNumber {
+      font-size: 32px;
+    }
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .headingNormal,
+  .headingScript {
+    font-size: 34px;
+  }
+
+  .headingDescription {
+    font-size: 13px;
+  }
+
+  .serviceRow {
+    padding: 20px 8px;
+  }
+
+  .serviceName {
+    font-size: 18px;
+  }
+
+  .serviceDescription {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .serviceRow,
+  .serviceNumber,
+  .serviceName,
+  .imageWrapper {
+    transition: none;
+  }
+}

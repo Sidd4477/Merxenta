@@ -1,0 +1,300 @@
+
+/* ==========================================
+   MERXENTA - LATEST INSIGHTS SECTION
+========================================== */
+
+.insightsSection {
+  position: relative;
+  width: 100%;
+  background-color: #f5f3e9;
+  color: #202020;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 120px 100px;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.headingArea {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.mainHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #202020;
+  white-space: nowrap;
+}
+
+/* Outfit Medium - 48px */
+
+.headingNormal {
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* Alex Brush - 48px */
+
+.headingScript {
+  font-family: "Alex Brush", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   INSIGHTS GRID
+   3 Cards - 384px Each
+========================================== */
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+
+  width: 100%;
+}
+
+/* ==========================================
+   INSIGHT CARD
+========================================== */
+
+.insightCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   INSIGHT IMAGE
+   Figma:
+   Width: 384px
+   Height: 338px
+   Radius: 15px
+========================================== */
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 384 / 338;
+  overflow: hidden;
+
+  border-radius: 15px;
+  background-color: #dedbd1;
+}
+
+/* Image Styling */
+
+.insightImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+/* Image Hover */
+
+.insightCard:hover .insightImage {
+  transform: scale(1.04);
+}
+
+/* ==========================================
+   IMAGE EYEBROW TEXT
+   Outfit Medium - 16px
+   Line Height: 130%
+========================================== */
+
+.insightDate {
+  width: 100%;
+  margin: 20px 0 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #696969;
+}
+
+/* ==========================================
+   INSIGHT TITLE
+   Outfit Medium - 24px
+   Line Height: 130%
+   Letter Spacing: -0.5%
+========================================== */
+
+.insightTitle {
+  width: 100%;
+  margin: 12px 0 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: -0.005em;
+
+  color: #202020;
+}
+
+/* ==========================================
+   SMALL LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 72px 72px 90px;
+  }
+
+  .insightsGrid {
+    gap: 20px;
+  }
+
+  .insightTitle {
+    font-size: 22px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 64px 40px 80px;
+  }
+
+  .headingArea {
+    margin-bottom: 32px;
+  }
+
+  .headingNormal,
+  .headingScript {
+    font-size: 42px;
+  }
+
+  .insightsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  .insightDate {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  .insightTitle {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 24px 72px;
+  }
+
+  .headingArea {
+    margin-bottom: 28px;
+  }
+
+  .headingNormal,
+  .headingScript {
+    font-size: 38px;
+  }
+
+  .insightsGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 384 / 338;
+  }
+
+  .insightDate {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .insightTitle {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .headingNormal,
+  .headingScript {
+    font-size: 34px;
+  }
+
+  .insightsGrid {
+    gap: 32px;
+  }
+
+  .insightDate {
+    font-size: 13px;
+  }
+
+  .insightTitle {
+    font-size: 19px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .insightImage {
+    transition: none;
+  }
+
+  .insightCard:hover .insightImage {
+    transform: none;
+  }
+}

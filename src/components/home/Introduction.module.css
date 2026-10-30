@@ -1,0 +1,419 @@
+
+/* ==========================================
+   MERXENTA - INTRODUCTION SECTION
+   Figma Reference: 1440px × 628px
+========================================== */
+
+.introduction {
+  width: 100%;
+  min-height: 628px;
+  background-color: #f5f3e9;
+  color: #202020;
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 628px;
+
+  margin: 0 auto;
+  padding: 80px 120px 60px;
+}
+
+/* ==========================================
+   INTRO CONTENT
+========================================== */
+
+.introContent {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ==========================================
+   MAIN HEADING
+   Outfit Medium
+   Size: 32px
+   Line Height: 120%
+   Letter Spacing: -1%
+========================================== */
+
+.heading {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+
+  color: #696969;
+}
+
+/* Highlighted words */
+
+.highlight {
+  font: inherit;
+  color: #202020;
+}
+
+/* ==========================================
+   SUBHEADING
+   Outfit Regular
+   Size: 16px
+   Line Height: 130%
+========================================== */
+
+.description {
+  width: 100%;
+  max-width: 850px;
+
+  margin-top: 24px;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #696969;
+}
+
+/* ==========================================
+   STATISTICS GRID
+========================================== */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  width: 100%;
+  margin-top: 64px;
+}
+
+/* ==========================================
+   STATISTICS CARD
+   Figma Reference:
+   Width: 282px
+   Height: 200px
+   Radius: 20px
+   Right Border: 1px
+========================================== */
+
+.statCard {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+  height: 200px;
+  min-width: 0;
+
+  padding: 24px 20px;
+
+  border: none;
+  border-right: 1px ;
+  border-radius: 20px;
+
+  background-color: transparent;
+  color: #202020;
+
+  cursor: default;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.statCard:last-child {
+  border-right: none;
+}
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+/* ==========================================
+   STAT NUMBER
+   Outfit SemiBold
+   Size: 64px
+   Line Height: 110px
+   Letter Spacing: -2%
+========================================== */
+
+.statNumber {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 110px;
+  letter-spacing: -0.02em;
+
+  color: #202020;
+
+  transition: color 0.3s ease;
+}
+
+/* ==========================================
+   STAT LABEL
+   Outfit Medium
+   Size: 20px
+   Line Height: 130%
+   Letter Spacing: -2%
+========================================== */
+
+.statLabel {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+
+  color: #696969;
+
+  transition: color 0.3s ease;
+}
+
+/* ==========================================
+   HOVER EFFECT
+   Hover Background: #9D2177
+========================================== */
+
+@media (hover: hover) {
+  .statCard:hover {
+    background-color: #d94bae;
+    color: #ffffff;
+
+    border-right-color: transparent;
+
+    box-shadow: 0 12px 28px rgba(157, 33, 119, 0.15);
+
+    transform: translateY(-4px);
+  }
+
+  .statCard:hover .statNumber,
+  .statCard:hover .statLabel {
+    color: #ffffff;
+  }
+}
+
+/* ==========================================
+   SMALL LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .statCard {
+    padding: 20px 16px;
+  }
+
+  .statNumber {
+    font-size: 56px;
+  }
+
+  .statLabel {
+    font-size: 17px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .introduction {
+    min-height: auto;
+  }
+
+  .container {
+    min-height: auto;
+    padding: 72px 40px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 16px;
+    margin-top: 48px;
+  }
+
+  .statCard {
+    height: 180px;
+  }
+
+  .statCard:nth-child(2) {
+    border-right: none;
+  }
+
+  .statNumber {
+    font-size: 56px;
+    line-height: 90px;
+  }
+
+  .statLabel {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 64px 24px;
+  }
+
+  .heading {
+    font-size: 24px;
+    line-height: 125%;
+  }
+
+  .description {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .statsGrid {
+    margin-top: 40px;
+    gap: 12px;
+  }
+
+  .statCard {
+    height: 160px;
+    padding: 20px 16px;
+
+    border: 1px solid #dedbd1;
+    border-radius: 16px;
+  }
+
+  .statNumber {
+    font-size: 46px;
+    line-height: 75px;
+  }
+
+  .statLabel {
+    font-size: 15px;
+    line-height: 130%;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .statsGrid {
+    gap: 10px;
+  }
+
+  .statCard {
+    height: 145px;
+    padding: 16px 12px;
+  }
+
+  .statNumber {
+    font-size: 40px;
+    line-height: 65px;
+  }
+
+  .statLabel {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE
+========================================== */
+
+@media (max-width: 360px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statCard {
+    height: 130px;
+  }
+
+  .statNumber {
+    font-size: 44px;
+  }
+
+  .statLabel {
+    font-size: 15px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .statCard,
+  .statNumber,
+  .statLabel {
+    transition: none;
+  }
+
+  .statCard:hover {
+    transform: none;
+  }
+}

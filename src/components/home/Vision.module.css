@@ -1,0 +1,568 @@
+
+/* ==========================================
+   MERXENTA - WHAT MOVES US FORWARD
+========================================== */
+
+.visionSection {
+  width: 100%;
+  background-color: #f5f3e9;
+  color: #202020;
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 120px 100px;
+}
+
+/* ==========================================
+   MAIN HEADING
+   Alex Brush + Outfit - 48px
+========================================== */
+
+.mainHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: max-content;
+  max-width: 100%;
+
+  margin: 0 0 40px;
+  padding: 0;
+
+  color: #202020;
+}
+
+.headingLine {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   TOP TWO CARDS
+   588px + 588px + 24px = 1200px
+========================================== */
+
+.topCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 588px));
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+/* ==========================================
+   SHARED CARD
+========================================== */
+
+.card {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #dedbd1;
+  border-radius: 20px;
+}
+
+.firstCard,
+.secondCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 315px;
+  padding: 32px;
+}
+
+.firstCard {
+  background-color: transparent;
+}
+
+.secondCard {
+  background-color: #9d2177;
+  border-color: #9d2177;
+  color: #ffffff;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* ==========================================
+   EYEBROW TEXT
+   Outfit Regular - 16px
+========================================== */
+
+.eyebrow {
+  margin: 0 0 10px;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   CARD MAIN CONTENT
+   Outfit Medium - 24px
+========================================== */
+
+.cardHeading {
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.005em;
+}
+
+.firstCard .cardHeading {
+  color: #202020;
+}
+
+.secondCard .cardHeading {
+  color: #ffffff;
+}
+
+/* ==========================================
+   FIRST CARD BUTTON
+   166px × 48px
+========================================== */
+
+.approachButton {
+  position: relative;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 166px;
+  height: 48px;
+
+  padding: 8px 8px 8px 16px;
+  gap: 8px;
+
+  border-radius: 99px;
+  background-color: #202020;
+  color: #ffffff;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ==========================================
+   SECOND CARD BUTTON
+========================================== */
+
+.aboutButton {
+  position: relative;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 180px;
+  height: 48px;
+
+  padding: 8px 8px 8px 16px;
+  gap: 8px;
+
+  border-radius: 99px;
+  background-color: #ffffff;
+  color: #9d2177;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ==========================================
+   BUTTON TEXT
+========================================== */
+
+.buttonText {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   BUTTON CIRCLE
+   32px × 32px
+========================================== */
+
+.buttonCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+
+  border-radius: 99px;
+  background-color: #ffffff;
+  color: #202020;
+}
+
+.aboutButton .buttonCircle {
+  background-color: #9d2177;
+  color: #ffffff;
+}
+
+.buttonCircle svg {
+  display: block;
+  width: 12.73px;
+  height: 10.61px;
+}
+
+/* ==========================================
+   BUTTON HOVER
+========================================== */
+
+.approachButton:hover,
+.aboutButton:hover {
+  transform: translateY(-2px);
+}
+
+.approachButton:hover {
+  background-color: #383838;
+}
+
+.aboutButton:hover {
+  background-color: #f5f3e9;
+}
+
+/* ==========================================
+   SECOND CARD DECORATIVE GRID
+========================================== */
+
+.decorativeGrid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+
+  width: 60%;
+  height: 70%;
+
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.decorativeGrid span {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+/* ==========================================
+   THIRD CARD
+   1200px × 311px
+========================================== */
+
+.thirdCard {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 311px;
+
+  background-color: transparent;
+}
+
+.thirdCardContent {
+  position: relative;
+  z-index: 2;
+
+  width: calc(100% - 520px);
+  max-width: 680px;
+
+  padding: 32px;
+}
+
+.thirdCardContent .cardHeading {
+  color: #202020;
+}
+
+/* ==========================================
+   THIRD CARD WAVE IMAGE
+   520px × 311px
+   Attached to right corner
+========================================== */
+
+.waveImageWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 520px;
+  height: 311px;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.waveImage {
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* ==========================================
+   SMALL LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 72px 72px 90px;
+  }
+
+  .topCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .firstCard,
+  .secondCard {
+    padding: 28px;
+  }
+
+  .cardHeading {
+    font-size: 21px;
+  }
+
+  .thirdCardContent {
+    width: 58%;
+  }
+
+  .waveImageWrapper {
+    width: 44%;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 64px 40px 80px;
+  }
+
+  .mainHeading {
+    margin-bottom: 32px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 42px;
+  }
+
+  .topCards {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .firstCard,
+  .secondCard {
+    height: 340px;
+    padding: 24px;
+  }
+
+  .cardHeading {
+    font-size: 19px;
+  }
+
+  .eyebrow {
+    font-size: 14px;
+  }
+
+  .thirdCardContent {
+    width: 62%;
+    padding: 24px;
+  }
+
+  .waveImageWrapper {
+    width: 42%;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 24px 72px;
+  }
+
+  .mainHeading {
+    margin-bottom: 28px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 38px;
+  }
+
+  .topCards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .firstCard,
+  .secondCard {
+    height: auto;
+    min-height: 315px;
+    padding: 24px;
+    gap: 28px;
+  }
+
+  .cardHeading {
+    font-size: 20px;
+  }
+
+  .eyebrow {
+    font-size: 14px;
+  }
+
+  .thirdCard {
+    height: auto;
+    min-height: 450px;
+    align-items: flex-start;
+  }
+
+  .thirdCardContent {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .thirdCardContent .cardHeading {
+    max-width: 100%;
+  }
+
+  .waveImageWrapper {
+    top: auto;
+    bottom: 0;
+
+    width: 100%;
+    height: 180px;
+  }
+
+  .waveImage {
+    object-position: right bottom;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 34px;
+  }
+
+  .headingLine {
+    gap: 8px;
+  }
+
+  .firstCard,
+  .secondCard {
+    padding: 20px;
+  }
+
+  .cardHeading {
+    font-size: 18px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+  }
+
+  .buttonText {
+    font-size: 14px;
+  }
+
+  .thirdCard {
+    min-height: 440px;
+  }
+
+  .thirdCardContent {
+    padding: 20px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .approachButton,
+  .aboutButton {
+    transition: none;
+  }
+
+  .approachButton:hover,
+  .aboutButton:hover {
+    transform: none;
+  }
+}
