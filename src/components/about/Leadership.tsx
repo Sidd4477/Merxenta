@@ -3,6 +3,12 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import {
+  FaLinkedin,
+  FaFacebook,
+  FaXTwitter,
+} from "react-icons/fa6";
+
 import styles from "./Leadership.module.css";
 
 type Leader = {
@@ -19,76 +25,23 @@ const leaders: Leader[] = [
   },
   {
     name: "Name Here",
-    designation: "Leadership Team",
+    designation: "Founder & Chairman",
     image: "/images/about/leadership/Img2.png",
   },
   {
     name: "Name Here",
-    designation: "Leadership Team",
+    designation: "Founder & Chairman",
     image: "/images/about/leadership/Img3.png",
   },
 ];
 
-function LinkedInIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <rect
-        x="3"
-        y="3"
-        width="18"
-        height="18"
-        rx="2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M7.5 10V17M7.5 7V7.1M11 17V10H14V11.2C14.5 10.3 15.3 9.8 16.5 10C18 10.2 18 11.5 18 13V17M11 13V17"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function FacebookIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle
-        cx="12"
-        cy="12"
-        r="9"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M14.5 7.5H13C12 7.5 11.5 8 11.5 9V17M9.5 11.5H14"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function XIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M5 4L19 20M19 4L5 20M5 4H9L19 20H15M19 4H15L5 20H9"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+/* ==========================================
+   LEADERSHIP COMPONENT
+========================================== */
 
 export default function Leadership() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(
-    null
-  );
+  const [activeIndex, setActiveIndex] =
+    useState<number | null>(null);
 
   return (
     <section
@@ -96,15 +49,27 @@ export default function Leadership() {
       aria-labelledby="leadership-heading"
     >
       <div className={styles.container}>
+
+        {/* ==================================
+            MAIN HEADING
+        ================================== */}
+
         <h2
           id="leadership-heading"
           className={styles.mainHeading}
         >
-          <span className={styles.normalText}>Group</span>
+          <span className={styles.normalText}>
+            Group
+          </span>
+
           <span className={styles.scriptText}>
             Leadership
           </span>
         </h2>
+
+        {/* ==================================
+            LEADERSHIP CARDS
+        ================================== */}
 
         <div className={styles.cardsGrid}>
           {leaders.map((leader, index) => (
@@ -115,24 +80,24 @@ export default function Leadership() {
                   ? styles.cardActive
                   : ""
               }`}
-              onMouseEnter={() => setActiveIndex(index)}
-              onMouseLeave={() => setActiveIndex(null)}
-              onFocus={() => setActiveIndex(index)}
-              onBlur={(event) => {
-                if (
-                  !event.currentTarget.contains(
-                    event.relatedTarget as Node | null
-                  )
-                ) {
-                  setActiveIndex(null);
-                }
-              }}
+              onMouseEnter={() =>
+                setActiveIndex(index)
+              }
+              onMouseLeave={() =>
+                setActiveIndex(null)
+              }
               onClick={() =>
                 setActiveIndex(
-                  activeIndex === index ? null : index
+                  activeIndex === index
+                    ? null
+                    : index
                 )
               }
             >
+              {/* ==========================
+                  LEADER IMAGE
+              ========================== */}
+
               <Image
                 src={leader.image}
                 alt={leader.name}
@@ -142,7 +107,14 @@ export default function Leadership() {
                 priority={index === 0}
               />
 
+              {/* ==========================
+                  FIGMA WHITE HOVER PANEL
+              ========================== */}
+
               <div className={styles.hoverPanel}>
+
+                {/* LEFT INFORMATION BOX */}
+
                 <div className={styles.leaderInfo}>
                   <h3 className={styles.leaderName}>
                     {leader.name}
@@ -153,23 +125,47 @@ export default function Leadership() {
                   </p>
                 </div>
 
+                {/* RIGHT SOCIAL ICON STRIP */}
+
                 <div className={styles.socialLinks}>
-                  <span className={styles.socialIcon}>
-                    <LinkedInIcon />
+
+                  {/* LINKEDIN */}
+
+                  <span
+                    className={styles.socialIcon}
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                  >
+                    <FaLinkedin />
                   </span>
 
-                  <span className={styles.socialIcon}>
-                    <FacebookIcon />
+                  {/* FACEBOOK */}
+
+                  <span
+                    className={styles.socialIcon}
+                    aria-label="Facebook"
+                    title="Facebook"
+                  >
+                    <FaFacebook />
                   </span>
 
-                  <span className={styles.socialIcon}>
-                    <XIcon />
+                  {/* X / TWITTER */}
+
+                  <span
+                    className={styles.socialIcon}
+                    aria-label="X"
+                    title="X"
+                  >
+                    <FaXTwitter />
                   </span>
+
                 </div>
+
               </div>
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );

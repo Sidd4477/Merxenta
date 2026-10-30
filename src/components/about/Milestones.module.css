@@ -1,0 +1,465 @@
+
+/* ==========================================
+   MERXENTA - MILESTONES SECTION
+========================================== */
+
+.milestonesSection {
+  position: relative;
+  width: 100%;
+  background-color: #f5f3e9;
+  color: #202020;
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+  display: grid;
+  grid-template-columns: 400px minmax(0, 1fr);
+  column-gap: 40px;
+
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 80px 120px 100px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   LEFT HEADING COLUMN
+========================================== */
+
+.headingColumn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  min-width: 0;
+}
+
+/* ==========================================
+   MAIN HEADING
+   ALEX BRUSH + OUTFIT
+   64px
+========================================== */
+
+.mainHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: max-content;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   HEADING LINE
+========================================== */
+
+.headingLine {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+/* ==========================================
+   ALEX BRUSH TEXT
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 64px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
+
+/* ==========================================
+   OUTFIT TEXT
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 64px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
+
+/* ==========================================
+   RIGHT TIMELINE CONTENT
+========================================== */
+
+.timelineContent {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  column-gap: 24px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   TIMELINE RAIL
+   FIGMA WIDTH: 48px
+========================================== */
+
+.timelineRail {
+  position: relative;
+
+  width: 48px;
+  height: 580px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ==========================================
+   VERTICAL LINE
+========================================== */
+
+.timelineLine {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  width: 1px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to bottom,
+    #c72a97 0%,
+    #c72a97 42%,
+    #a7a7a7 42%,
+    #a7a7a7 100%
+  );
+}
+
+/* ==========================================
+   PINK DOT
+========================================== */
+
+.timelineDot {
+  position: absolute;
+
+  top: 42%;
+  left: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background-color: #c72a97;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+}
+
+/* ==========================================
+   MILESTONES LIST
+========================================== */
+
+.milestonesList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   MILESTONE ITEM
+========================================== */
+
+.milestoneItem {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 308px;
+
+  align-items: start;
+
+  column-gap: 24px;
+
+  width: 100%;
+  min-height: 172px;
+}
+
+/* ==========================================
+   MILESTONE TEXT
+========================================== */
+
+.milestoneText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+}
+
+/* ==========================================
+   YEAR
+   OUTFIT MEDIUM - 16px
+========================================== */
+
+.year {
+  display: block;
+
+  margin: 0 0 12px;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   DESCRIPTION
+   OUTFIT MEDIUM - 24px
+========================================== */
+
+.description {
+  margin: 0;
+  padding: 0;
+
+  max-width: 400px;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: -0.005em;
+
+  color: #202020;
+}
+
+/* ==========================================
+   MILESTONE IMAGE
+   FIGMA: 308px × 172px
+========================================== */
+
+.imageWrapper {
+  position: relative;
+
+  width: 308px;
+  height: 172px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background-color: #e9e6df;
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.milestoneImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .container {
+    grid-template-columns: 34% minmax(0, 1fr);
+    column-gap: 32px;
+
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .milestoneItem {
+    grid-template-columns: minmax(0, 1fr) 42%;
+  }
+
+  .imageWrapper {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    grid-template-columns: 32% minmax(0, 1fr);
+    column-gap: 24px;
+
+    padding: 72px 6% 90px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 52px;
+  }
+
+  .timelineContent {
+    column-gap: 16px;
+  }
+
+  .milestoneItem {
+    column-gap: 16px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+
+    padding: 64px 40px 80px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 48px;
+  }
+
+  .timelineContent {
+    grid-template-columns: 48px minmax(0, 1fr);
+    column-gap: 20px;
+  }
+
+  .milestoneItem {
+    grid-template-columns: minmax(0, 1fr) 308px;
+  }
+
+  .description {
+    font-size: 22px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+
+    padding: 60px 24px 72px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 42px;
+  }
+
+  .headingLine {
+    gap: 8px;
+  }
+
+  .timelineContent {
+    grid-template-columns: 24px minmax(0, 1fr);
+    column-gap: 16px;
+  }
+
+  .timelineRail {
+    width: 24px;
+    height: 100%;
+  }
+
+  .milestonesList {
+    gap: 32px;
+  }
+
+  .milestoneItem {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .year {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .scriptText,
+  .normalText {
+    font-size: 34px;
+  }
+
+  .headingLine {
+    gap: 6px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .imageWrapper {
+    height: 172px;
+  }
+
+  .milestonesList {
+    gap: 28px;
+  }
+}

@@ -55,16 +55,16 @@ export default function Navbar() {
   /* ==========================================
      NAVBAR COLOR BASED ON ROUTE
 
-     ABOUT   = BLACK
-     CAREERS = BLACK
-     OTHERS  = WHITE
+     HOME    = WHITE
+     CAREERS = WHITE
+     OTHERS  = BLACK
   ========================================== */
 
-  const isDarkNavbar =
-    pathname === "/about" ||
-    pathname.startsWith("/about/") ||
+  const isDarkNavbar = !(
+    pathname === "/" ||
     pathname === "/careers" ||
-    pathname.startsWith("/careers/");
+    pathname.startsWith("/careers/")
+  );
 
   /* ==========================================
      CLOSE MENU ON ROUTE CHANGE

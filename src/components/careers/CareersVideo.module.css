@@ -1,0 +1,136 @@
+
+/* ==========================================
+   MERXENTA - CAREERS VIDEO SECTION
+========================================== */
+
+.videoSection {
+  position: relative;
+
+  width: 100%;
+
+  background-color: #f5f3e9;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   VIDEO CONTAINER
+   FIGMA: 1440px × 668px
+========================================== */
+
+.videoContainer {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+
+  height: 668px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  background-color: #202020;
+}
+
+/* ==========================================
+   VIDEO
+========================================== */
+
+.video {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  background-color: #202020;
+}
+
+/* ==========================================
+   DARK VIDEO OVERLAY
+========================================== */
+
+.videoOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.42);
+
+  pointer-events: none;
+
+  opacity: 1;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .videoContainer {
+    height: auto;
+    aspect-ratio: 1440 / 668;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .videoContainer {
+    height: auto;
+    aspect-ratio: 1440 / 668;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .videoContainer {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .videoContainer {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+  }
+
+  .video {
+    object-fit: cover;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .videoContainer {
+    aspect-ratio: 16 / 9;
+  }
+}

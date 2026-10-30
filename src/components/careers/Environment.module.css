@@ -1,0 +1,566 @@
+
+/* ==========================================
+   MERXENTA - ENVIRONMENT SECTION
+========================================== */
+
+.environmentSection {
+  position: relative;
+
+  width: 100%;
+
+  background-color: #f5f3e9;
+  color: #202020;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+   FIGMA: 1200px CONTENT
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 80px 120px 100px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   TOP CONTENT
+========================================== */
+
+.topContent {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 589px)
+    minmax(0, 585px);
+
+  column-gap: 26px;
+
+  align-items: start;
+
+  width: 100%;
+}
+
+/* ==========================================
+   LEFT HEADING COLUMN
+========================================== */
+
+.headingColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+/* ==========================================
+   MAIN HEADING
+   FIGMA:
+   OUTFIT 64px
+   ALEX BRUSH 64px
+========================================== */
+
+.mainHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   HEADING LINE
+========================================== */
+
+.headingLine {
+  display: flex;
+  align-items: baseline;
+
+  gap: 8px;
+
+  width: 100%;
+
+  white-space: nowrap;
+}
+
+/* ==========================================
+   OUTFIT TEXT
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 64px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: -0.04em;
+
+  color: #202020;
+}
+
+/* ==========================================
+   ALEX BRUSH TEXT
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 64px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 100%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   OPEN ROLES BUTTON
+   FIGMA: 145px × 48px
+========================================== */
+
+.openRolesButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 145px;
+  height: 48px;
+
+  margin-top: 32px;
+
+  padding:
+    8px
+    8px
+    8px
+    16px;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  border-radius: 99px;
+  border: none;
+
+  background-color: #202020;
+  color: #ffffff;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ==========================================
+   BUTTON TEXT
+   OUTFIT MEDIUM 16px
+========================================== */
+
+.buttonText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   BUTTON CIRCLE
+   FIGMA: 32px × 32px
+========================================== */
+
+.buttonCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  border-radius: 99px;
+
+  background-color: #ffffff;
+  color: #202020;
+}
+
+/* ==========================================
+   BUTTON ARROW
+========================================== */
+
+.buttonCircle svg {
+  display: block;
+
+  width: 12.73px;
+  height: 10.61px;
+}
+
+/* ==========================================
+   BUTTON HOVER
+========================================== */
+
+.openRolesButton:hover {
+  background-color: #383838;
+
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RIGHT DESCRIPTION COLUMN
+========================================== */
+
+.descriptionColumn {
+  width: 100%;
+  max-width: 585px;
+}
+
+/* ==========================================
+   TOP DESCRIPTION
+   FIGMA: 585px × 105px
+========================================== */
+
+.topDescription {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+/* ==========================================
+   CENTER DESCRIPTION WRAPPER
+========================================== */
+
+.centerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+/* ==========================================
+   CENTER DESCRIPTION
+   FIGMA: 942px × 63px
+========================================== */
+
+.centerDescription {
+  width: 100%;
+  max-width: 942px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 130%;
+  letter-spacing: 0;
+
+  text-align: center;
+
+  color: #202020;
+}
+
+/* ==========================================
+   IMAGE GALLERY
+   FIGMA:
+   588px + 24px + 588px
+========================================== */
+
+.galleryGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 588px));
+
+  column-gap: 24px;
+  row-gap: 24px;
+
+  width: 100%;
+}
+
+/* ==========================================
+   GALLERY ITEM
+   FIGMA: 588px × 227px
+========================================== */
+
+.galleryItem {
+  position: relative;
+
+  width: 100%;
+  height: 227px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background-color: #e9e6df;
+
+  isolation: isolate;
+}
+
+/* ==========================================
+   GALLERY IMAGE
+========================================== */
+
+.galleryImage {
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.6s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+@media (hover: hover) {
+  .galleryItem:hover .galleryImage {
+    transform: scale(1.035);
+  }
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .topContent {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    column-gap: 24px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: clamp(44px, 4.45vw, 64px);
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 72px 6% 90px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 48px;
+  }
+
+  .topContent {
+    column-gap: 30px;
+  }
+
+  .centerContent {
+    margin-bottom: 48px;
+  }
+
+  .galleryGrid {
+    gap: 20px;
+  }
+
+  .galleryItem {
+    height: 220px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .container {
+    padding: 64px 40px 80px;
+  }
+
+  .topContent {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: 48px;
+  }
+
+  .descriptionColumn {
+    max-width: 100%;
+  }
+
+  .centerContent {
+    margin-top: 36px;
+    margin-bottom: 40px;
+  }
+
+  .galleryGrid {
+    gap: 16px;
+  }
+
+  .galleryItem {
+    height: 200px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 24px 72px;
+  }
+
+  .topContent {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+
+  .headingLine {
+    gap: 6px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: clamp(30px, 7vw, 42px);
+  }
+
+  .openRolesButton {
+    margin-top: 28px;
+  }
+
+  .topDescription {
+    font-size: 15px;
+  }
+
+  .centerContent {
+    margin-top: 32px;
+    margin-bottom: 36px;
+  }
+
+  .centerDescription {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .galleryItem {
+    width: 100%;
+    height: 240px;
+
+    border-radius: 16px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 56px 20px 64px;
+  }
+
+  .normalText,
+  .scriptText {
+    font-size: clamp(27px, 7.3vw, 34px);
+  }
+
+  .headingLine {
+    gap: 5px;
+  }
+
+  .openRolesButton {
+    margin-top: 24px;
+  }
+
+  .topDescription {
+    font-size: 14px;
+  }
+
+  .centerDescription {
+    font-size: 14px;
+  }
+
+  .galleryItem {
+    height: 200px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .openRolesButton,
+  .galleryImage {
+    transition: none;
+  }
+
+  .openRolesButton:hover,
+  .galleryItem:hover .galleryImage {
+    transform: none;
+  }
+}
