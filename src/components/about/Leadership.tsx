@@ -19,17 +19,17 @@ type Leader = {
 
 const leaders: Leader[] = [
   {
-    name: "Siddharth Kumar Jha",
+    name: "Ankit Kumar Das",
     designation: "Founder & Chairman",
     image: "/images/about/leadership/Img.png",
   },
   {
-    name: "Name Here",
+    name: "Shivanshi Gupta",
     designation: "Founder & Chairman",
     image: "/images/about/leadership/Img2.png",
   },
   {
-    name: "Name Here",
+    name: "Vishal Gupta",
     designation: "Founder & Chairman",
     image: "/images/about/leadership/Img3.png",
   },
