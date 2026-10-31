@@ -1,0 +1,425 @@
+
+/* ==========================================
+   MERXENTA - BUSINESS NETWORK SECTION
+========================================== */
+
+.networkSection {
+  position: relative;
+  margin-top: -80px;
+  width: 100%;
+  min-height: 720px;
+
+  background-color: #f5f3e9;
+  background-image: url("/images/Bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   MAIN CANVAS
+========================================== */
+
+.networkCanvas {
+  position: relative;
+
+  width: 1440px;
+  height: 720px;
+
+  margin: 0 auto;
+
+  transform-origin: top center;
+}
+
+/* ==========================================
+   CONNECTION SVG
+========================================== */
+
+.connectionSvg {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 1440px;
+  height: 720px;
+
+  overflow: visible;
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* ==========================================
+   BASE CONNECTION LINES
+========================================== */
+
+.connectionBase {
+  fill: none;
+
+  stroke-width: 1;
+  stroke-linecap: round;
+
+  opacity: 0.35;
+}
+
+/* ==========================================
+   CENTER VIBHUSHNAM CONNECTION
+========================================== */
+
+.centerConnection {
+  stroke: #E9A4BD;
+  stroke-width: 1.5;
+  opacity: 0.8;
+}
+
+/* ==========================================
+   FLOWING CONNECTION LINES
+========================================== */
+
+.connectionFlow {
+  fill: none;
+
+  stroke-width: 2;
+  stroke-linecap: round;
+
+  stroke-dasharray: 12 88;
+  stroke-dashoffset: 100;
+
+  opacity: 0;
+}
+
+/* ==========================================
+   ALL FIVE CONNECTIONS ANIMATE TOGETHER
+========================================== */
+
+.isVisible .connectionFlow {
+  opacity: 1;
+
+  animation: networkFlow 3s linear infinite;
+}
+
+@keyframes networkFlow {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   TRAVELING PINK STREAK
+========================================== */
+
+.travelingLight {
+  opacity: 0;
+}
+
+.isVisible .travelingLight {
+  opacity: 1;
+}
+
+/* ==========================================
+   MERXENTA MAIN LOGO BOX
+========================================== */
+
+.mainLogoBox {
+  position: absolute;
+
+  width: 138px;
+  height: 122px;
+
+  top: 80px;
+  left: 651px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    #fffaf3 0%,
+    #fff8ed 55%,
+    #f7f0fb 100%
+  );
+
+  border: 1px solid rgba(244, 191, 194, 0.55);
+  border-radius: 20px;
+
+  box-shadow:
+    -5px 0 16px rgba(255, 178, 192, 0.3),
+    5px 0 16px rgba(189, 160, 255, 0.25),
+    0 8px 20px rgba(63, 35, 49, 0.08);
+
+  z-index: 5;
+}
+
+/* ==========================================
+   MERXENTA INNER LOGO
+========================================== */
+
+.mainLogoInner {
+  position: absolute;
+
+  width: 76px;
+  height: 67px;
+
+  top: 22px;
+  left: 24px;
+}
+
+/* ==========================================
+   IMAGE STYLING
+========================================== */
+
+.logoImage {
+  object-fit: contain;
+}
+
+/* ==========================================
+   HEADING CONTAINER
+========================================== */
+
+.headingContainer {
+  position: absolute;
+
+  top: 270px;
+  left: 50%;
+
+  width: 419px;
+  height: 120px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  z-index: 4;
+}
+
+/* ==========================================
+   MAIN HEADING
+========================================== */
+
+.mainHeading {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #202020;
+
+  text-align: center;
+
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   HEADING LINES
+========================================== */
+
+.headingFirstLine,
+.headingSecondLine {
+  display: block;
+  width: 100%;
+
+  white-space: nowrap;
+}
+
+/* ==========================================
+   ALEX BRUSH
+========================================== */
+
+.scriptText {
+  font-family: "Alex Brush", cursive;
+
+  font-size: 48px;
+  font-weight: 400;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   OUTFIT
+========================================== */
+
+.normalText {
+  font-family: "Outfit", sans-serif;
+
+  font-size: 48px;
+  font-weight: 500;
+
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+/* ==========================================
+   BUSINESS CARDS WRAPPER
+========================================== */
+
+.businessCards {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+/* ==========================================
+   BUSINESS LOGO OUTER BOX
+========================================== */
+
+.businessCard {
+  position: absolute;
+
+  width: 98px;
+  height: 98px;
+
+  top: 542px;
+
+  background: linear-gradient(
+    145deg,
+    #fffaf1 0%,
+    #fdf8ee 60%,
+    #f8f2fb 100%
+  );
+
+  border: 1px solid rgba(245, 202, 191, 0.55);
+  border-radius: 16px;
+
+  box-shadow:
+    -4px 0 12px rgba(255, 180, 194, 0.25),
+    4px 0 12px rgba(190, 163, 255, 0.2),
+    0 7px 16px rgba(40, 20, 40, 0.06);
+
+  pointer-events: auto;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* ==========================================
+   CARD HOVER
+========================================== */
+
+.businessCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    -5px 0 18px rgba(255, 180, 194, 0.35),
+    5px 0 18px rgba(190, 163, 255, 0.3),
+    0 12px 25px rgba(40, 20, 40, 0.1);
+}
+
+/* ==========================================
+   BUSINESS LOGO
+========================================== */
+
+.businessLogo {
+  position: absolute;
+}
+
+/* ==========================================
+   RESPONSIVE - LAPTOP
+========================================== */
+
+@media (max-width: 1439px) {
+
+  .networkCanvas {
+    left: 50%;
+    margin-left: -720px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+  .networkSection {
+    min-height: 620px;
+  }
+
+  .networkCanvas {
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+
+  .networkSection {
+    min-height: 480px;
+  }
+
+  .networkCanvas {
+    transform: scale(0.5);
+    transform-origin: top center;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+  .networkSection {
+    min-height: 390px;
+  }
+
+  .networkCanvas {
+    transform: scale(0.32);
+    transform-origin: top center;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .connectionFlow {
+    animation: none !important;
+    opacity: 0.4;
+    stroke-dasharray: none;
+  }
+
+  .travelingLight {
+    display: none;
+  }
+
+  .businessCard {
+    transition: none;
+  }
+}
