@@ -293,10 +293,6 @@
   }
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
-
 @media (max-width: 767px) {
   .showcaseSection {
     height: 500vh;
@@ -306,10 +302,6 @@
     transform-origin: center center;
   }
 }
-
-/* ==========================================
-   REDUCED MOTION
-========================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .animatedImage,

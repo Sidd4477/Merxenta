@@ -168,7 +168,6 @@ function wrapIndex(index: number) {
 export default function BusinessShowcase() {
   const sectionRef = useRef<HTMLElement>(null);
   const progressRef = useRef(0);
-  const hasCompletedRef = useRef(false);
 
   const [progress, setProgress] = useState(0);
   const [canvasScale, setCanvasScale] = useState(1);
@@ -204,11 +203,14 @@ export default function BusinessShowcase() {
   /* ==========================================
      SCROLL PROGRESS
 
-     BEFORE COMPLETION:
-       Forward + Reverse Animation
+     DOWN SCROLL:
+       FORWARD ANIMATION
 
-     AFTER COMPLETION:
-       Normal Reverse Scrolling
+     UP SCROLL:
+       REVERSE ANIMATION
+
+     NO SCROLL LOCK
+     NO AUTOMATIC SCROLL JUMP
   ========================================== */
 
   useEffect(() => {
@@ -228,49 +230,6 @@ export default function BusinessShowcase() {
       const nextProgress = clamp(
         -rect.top / scrollDistance
       );
-
-      /* =====================================
-         RESET WHEN COMPLETELY ABOVE SECTION
-      ===================================== */
-
-      if (rect.top > window.innerHeight) {
-        hasCompletedRef.current = false;
-
-        if (progressRef.current !== 0) {
-          progressRef.current = 0;
-          setProgress(0);
-        }
-
-        return;
-      }
-
-      /* =====================================
-         MARK COMPLETION ONLY WHEN USER
-         HAS MOVED INTO THE NEXT SECTION
-      ===================================== */
-
-      if (rect.bottom <= 0) {
-        hasCompletedRef.current = true;
-      }
-
-      /* =====================================
-         AFTER COMPLETION:
-         KEEP FINAL MPS STATE
-      ===================================== */
-
-      if (hasCompletedRef.current) {
-        if (progressRef.current !== 1) {
-          progressRef.current = 1;
-          setProgress(1);
-        }
-
-        return;
-      }
-
-      /* =====================================
-         WHILE ANIMATION IS ACTIVE:
-         FORWARD + REVERSE BOTH WORK
-      ===================================== */
 
       if (
         Math.abs(
@@ -343,6 +302,7 @@ export default function BusinessShowcase() {
      Next     -> Right Bottom
 
      First slide has no previous image.
+     Last slide has no next image.
   ========================================== */
 
   const baseIndex = Math.floor(scrollPosition);
@@ -362,6 +322,7 @@ export default function BusinessShowcase() {
           },
         ]
       : []),
+
     {
       key: `current-${baseIndex}`,
       business:
@@ -372,30 +333,52 @@ export default function BusinessShowcase() {
       opacity: 1,
       zIndex: 11,
     },
-    {
-      key: `next-${baseIndex}`,
-      business:
-        businesses[wrapIndex(baseIndex + 1)],
-      position: getImagePosition(
-        1 - transitionProgress
-      ),
-      opacity: 1,
-      zIndex: 12,
-    },
-    {
-      key: `upcoming-${baseIndex}`,
-      business:
-        businesses[wrapIndex(baseIndex + 2)],
-      position: POSITIONS.right,
-      opacity: smoothstep(
-        transitionProgress
-      ),
-      zIndex: 9,
-    },
+
+    /* =====================================
+       NEXT IMAGE
+
+       HIDE WHEN MPS IS ACTIVE
+    ===================================== */
+
+    ...(baseIndex < maxIndex
+      ? [
+          {
+            key: `next-${baseIndex}`,
+            business:
+              businesses[wrapIndex(baseIndex + 1)],
+            position: getImagePosition(
+              1 - transitionProgress
+            ),
+            opacity: 1,
+            zIndex: 12,
+          },
+        ]
+      : []),
+
+    /* =====================================
+       UPCOMING IMAGE
+
+       DO NOT SHOW AFTER LAST BUSINESS
+    ===================================== */
+
+    ...(baseIndex + 2 <= maxIndex
+      ? [
+          {
+            key: `upcoming-${baseIndex}`,
+            business:
+              businesses[wrapIndex(baseIndex + 2)],
+            position: POSITIONS.right,
+            opacity: smoothstep(
+              transitionProgress
+            ),
+            zIndex: 9,
+          },
+        ]
+      : []),
   ];
 
   /* ==========================================
-     FIXED RIGHT ARROW SVG
+     RIGHT ARROW SVG
   ========================================== */
 
   const ArrowIcon = () => (
