@@ -38,7 +38,7 @@ const businesses: Business[] = [
   {
     id: "quickcargo",
     title: "Quick Cargo",
-    image: "/images/home/services/Quick Cargo.jpg",
+    image: "/images/home/services/Quick Cargo.png",
     description:
       "Connecting destinations through dependable logistics solutions. Quick Cargo simplifies the movement of goods with efficient cargo transportation services, helping businesses manage deliveries, streamline operations, and move shipments with greater confidence.",
     secondary:

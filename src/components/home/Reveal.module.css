@@ -6,10 +6,6 @@
 .revealSection {
   position: relative;
   width: 100%;
-
-  /*
-   * Existing scroll distance unchanged.
-   */
   height: 330vh;
 
   background-color: #f5f3e9;
@@ -40,7 +36,6 @@
   justify-content: center;
 
   width: 100%;
-
   height: 100vh;
   height: 100svh;
 
@@ -64,9 +59,6 @@
 
   margin: 0 auto;
 
-  /*
-   * Existing upward shift unchanged.
-   */
   transform: translateY(-16px);
 }
 
@@ -85,7 +77,61 @@
 }
 
 /* ==========================================
-   MAIN HEADING
+   FIXED "WE" HEADING
+========================================== */
+
+.fixedHeading {
+  position: absolute;
+  z-index: 20;
+
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  align-items: baseline;
+
+  width: max-content;
+
+  opacity: var(--we-reveal, 0);
+
+  transform:
+    translate(
+      calc(-100% - 94px),
+      -50%
+    );
+
+  pointer-events: none;
+  white-space: nowrap;
+
+  will-change: opacity;
+}
+
+/* ==========================================
+   WORD REVEAL WINDOW
+========================================== */
+
+.wordWindow {
+  position: absolute;
+  z-index: 3;
+
+  top: 50%;
+  left: 50%;
+
+  width: 750px;
+  max-width: 90%;
+
+  height: 120px;
+
+  overflow: hidden;
+
+  transform:
+    translate(-76px, -50%);
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   ANIMATED WORD HEADING
 ========================================== */
 
 .mainHeading {
@@ -93,16 +139,16 @@
   z-index: 3;
 
   top: 50%;
-  left: 50%;
+  left: 0;
 
   display: flex;
   align-items: baseline;
-  justify-content: center;
+  justify-content: flex-start;
 
   gap: 18px;
 
   width: max-content;
-  max-width: 90%;
+  max-width: 100%;
 
   margin: 0;
   padding: 0;
@@ -110,22 +156,17 @@
   color: #202020;
   white-space: nowrap;
 
-  opacity: var(--reveal, 0);
+  opacity: 1;
 
   transform:
-    translate(-50%, -50%)
+    translateY(-50%)
     translateY(
-      calc(
-        (1 - var(--reveal, 0)) * 24px
-      )
-    )
-    scale(
-      calc(
-        0.9 + var(--reveal, 0) * 0.1
-      )
+      var(--word-offset, 0px)
     );
 
-  will-change: transform, opacity;
+  transform-origin: left center;
+
+  will-change: transform;
 }
 
 /* ==========================================
@@ -167,36 +208,36 @@
   z-index: 2;
 
   overflow: hidden;
-
   border-radius: 20px;
 
-  /*
-   * Smooth image reveal from canvas center.
-   */
-  opacity: var(--reveal, 0);
+  opacity:
+    var(--image-opacity, 0);
 
   transform:
     translate(
       calc(
         (1 - var(--reveal, 0)) *
-        var(--start-x, 0px)
+        var(--start-x, 0px) +
+        var(--exit, 0) *
+        var(--exit-x, 0px)
       ),
       calc(
         (1 - var(--reveal, 0)) *
-        var(--start-y, 0px)
+        var(--start-y, 0px) +
+        var(--exit, 0) *
+        var(--exit-y, 0px)
       )
     )
     scale(
       calc(
-        0.55 + var(--reveal, 0) * 0.45
+        0.55 +
+        var(--reveal, 0) * 0.45
       )
     );
 
-  /*
-   * Avoid animated blur repaint cost.
-   * Keep animation on transform and opacity.
-   */
-  will-change: transform, opacity;
+  will-change:
+    transform,
+    opacity;
 
   backface-visibility: hidden;
 }
@@ -231,7 +272,7 @@
 }
 
 /* ==========================================
-   BOTTOM LEFT - FIXED POSITION
+   BOTTOM LEFT
 ========================================== */
 
 .imageBottomLeft {
@@ -243,7 +284,7 @@
 }
 
 /* ==========================================
-   BOTTOM RIGHT - FIXED POSITION
+   BOTTOM RIGHT
 ========================================== */
 
 .imageBottomRight {
@@ -338,10 +379,13 @@
     font-size: 66px;
   }
 
+  .wordWindow {
+    height: 100px;
+  }
+
   .revealImage {
     width: 160px;
     height: 160px;
-
     border-radius: 16px;
   }
 
@@ -392,13 +436,29 @@
   .revealCanvas {
     height: 100%;
     max-height: 680px;
-
     transform: none;
+  }
+
+  .fixedHeading {
+    transform:
+      translate(
+        calc(-100% - 90px),
+        -50%
+      );
+  }
+
+  .wordWindow {
+    width: 90%;
+    max-width: 90%;
+    height: 80px;
+
+    transform:
+      translate(-80px, -50%);
   }
 
   .mainHeading {
     gap: 10px;
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .scriptText,
@@ -413,7 +473,6 @@
   .revealImage {
     width: 130px;
     height: 140px;
-
     border-radius: 14px;
   }
 
@@ -508,7 +567,9 @@
    REDUCED MOTION
 ========================================== */
 
-@media (prefers-reduced-motion: reduce) {
+@media (
+  prefers-reduced-motion: reduce
+) {
   .revealImage {
     filter: none;
   }
